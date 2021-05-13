@@ -89,9 +89,21 @@ stages:
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     - path: src/preprocessing/create_features/create_features.py
-      md5: 9e5321875f88b46a70798441c5cd9e6c
-      size: 802
+      md5: 09233ac5fcefa4510f03d072f52deed8
+      size: 1242
     outs:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
       md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
       size: 79188
+  feature_analysis:
+    cmd: python src/eda/feature_analysis.py
+    deps:
+    - path: dataset/processed/new_features_added/dataset_with_new_features.csv
+      md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
+      size: 79188
+    - path: src/eda/feature_analysis.py
+      md5: acda5cff5a476a2ffcb2d77ea6ed5fc9
+      size: 1822
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402

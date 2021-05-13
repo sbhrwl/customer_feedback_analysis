@@ -48,3 +48,10 @@ stages:
       - dataset/raw/dataset_raw.csv
     outs:
       - dataset/processed/new_features_added/dataset_with_new_features.csv
+
+  feature_analysis:
+    cmd: python src/eda/feature_analysis.py
+    deps:
+      - src/get_parameters/get_parameters.py
+      - src/eda/feature_analysis.py
+      - dataset/processed/new_features_added/dataset_with_new_features.csv

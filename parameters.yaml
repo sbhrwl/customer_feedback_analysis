@@ -19,3 +19,7 @@ feature_processing:
   dataset_ngram_count_vectorized: dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
   dataset_tfidf_vectorised: dataset/processed/vectorized/dataset_tfidf_vectorised.csv
   dataset_with_new_features: dataset/processed/new_features_added/dataset_with_new_features.csv
+
+feature_analysis:
+  message_length_analysis: artifacts/eda-artifacts/message_length_analysis.png
+  punctuation_percent_analysis: artifacts/eda-artifacts/punctuation_percent_analysis.png
