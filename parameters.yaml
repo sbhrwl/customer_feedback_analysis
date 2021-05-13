@@ -1,0 +1,10 @@
+base:
+  project_name: NLP sentiment Analysis
+  dataset_name: review-datset
+  target_column: Sentiment
+
+data_source:
+  store_location: dataset/source/dataset_source.csv
+
+save_raw_data:
+  dataset_raw: dataset/raw/dataset_raw.csv

@@ -1,0 +1,9 @@
+stages:
+  save_raw_data:
+    cmd: python src/save_raw_data/save_raw_data.py
+    deps:
+    - src/get_parameters/get_parameters.py
+    - src/save_raw_data/save_raw_data.py
+    - dataset/source/dataset_source.csv
+    outs:
+    - dataset/raw/dataset_raw.csv
