@@ -55,6 +55,10 @@ stages:
       - src/get_parameters/get_parameters.py
       - src/eda/feature_analysis.py
       - dataset/processed/new_features_added/dataset_with_new_features.csv
+    outs:
+      - artifacts/eda-artifacts/histograms/message_length_analysis.png
+      - artifacts/eda-artifacts/histograms/message_length_logarithmic_analysis.png
+      - artifacts/eda-artifacts/histograms/punctuation_percent_analysis.png
 
   create_word_cloud:
     cmd: python src/eda/create_word_cloud.py
@@ -62,6 +66,8 @@ stages:
       - src/get_parameters/get_parameters.py
       - src/eda/create_word_cloud.py
       - dataset/processed/new_features_added/dataset_with_new_features.csv
+    outs:
+      - artifacts/eda-artifacts/word_cloud/word_cloud_good.png
 
   train_and_evaluate:
     cmd: python src/train_and_evaluate/train_and_evaluate.py

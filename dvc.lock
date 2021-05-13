@@ -119,6 +119,10 @@ stages:
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
+    outs:
+    - path: artifacts/eda-artifacts/word_cloud/word_cloud_good.png
+      md5: 9537a276c3936fd801ea2c36978d22c5
+      size: 325165
   train_and_evaluate:
     cmd: python src/train_and_evaluate/train_and_evaluate.py
     deps:
