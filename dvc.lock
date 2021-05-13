@@ -67,8 +67,8 @@ stages:
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     - path: src/preprocessing/text_vectorization/text_vectorization.py
-      md5: 712f397c432eb9e13ec735576d719047
-      size: 2779
+      md5: 4414b2317b697266acf7075d70e78690
+      size: 2890
     outs:
     - path: dataset/processed/vectorized/dataset_count_vectorized.csv
       md5: 71be4e99b4d8147e7771f716c63e4d30
@@ -89,8 +89,8 @@ stages:
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     - path: src/preprocessing/create_features/create_features.py
-      md5: 09233ac5fcefa4510f03d072f52deed8
-      size: 1242
+      md5: 6f33059b9026d243800670e625c881b5
+      size: 1244
     outs:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
       md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
@@ -102,8 +102,36 @@ stages:
       md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
       size: 79188
     - path: src/eda/feature_analysis.py
-      md5: acda5cff5a476a2ffcb2d77ea6ed5fc9
-      size: 1822
+      md5: 6695f492e743982ab178268cf6c91595
+      size: 2524
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
+  create_word_cloud:
+    cmd: python src/eda/create_word_cloud.py
+    deps:
+    - path: dataset/processed/new_features_added/dataset_with_new_features.csv
+      md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
+      size: 79188
+    - path: src/eda/create_word_cloud.py
+      md5: 027939aa83960c071523d1f39e127b8b
+      size: 1371
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate/train_and_evaluate.py
+    deps:
+    - path: dataset/raw/dataset_raw.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402
+    - path: src/train_and_evaluate/train_and_evaluate.py
+      md5: 7fcb8fd9d741d07f1b90c76c0ab51211
+      size: 2137
+    outs:
+    - path: artifacts/model-artifacts/confusion_matrix_analysis.png
+      md5: 8afbad94350769e7eab1ae54496b58ba
+      size: 11584

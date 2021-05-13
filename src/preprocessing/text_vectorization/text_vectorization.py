@@ -45,6 +45,8 @@ def text_ngram_vectorization(dataframe, file_to_create):
 
 def text_tfidf_vectorization(dataframe, file_to_create):
     tfidf_vectorizer = TfidfVectorizer(clean_text_for_Ngrams)
+    # Another way
+    # tfidf_vectorizer = TfidfVectorizer(ngram_range=(1, 2), max_features=50000, min_df=2)
     X = tfidf_vectorizer.fit_transform(dataframe['Comment'])
     X.shape
     df_count_vectorised = pd.DataFrame(X.toarray(), columns=tfidf_vectorizer.get_feature_names())

@@ -21,5 +21,10 @@ feature_processing:
   dataset_with_new_features: dataset/processed/new_features_added/dataset_with_new_features.csv
 
 feature_analysis:
-  message_length_analysis: artifacts/eda-artifacts/message_length_analysis.png
-  punctuation_percent_analysis: artifacts/eda-artifacts/punctuation_percent_analysis.png
+  message_length_analysis: artifacts/eda-artifacts/histograms/message_length_analysis.png
+  message_length_logarithmic_analysis: artifacts/eda-artifacts/histograms/message_length_logarithmic_analysis.png
+  punctuation_percent_analysis: artifacts/eda-artifacts/histograms/punctuation_percent_analysis.png
+  word_cloud_bad: artifacts/eda-artifacts/word_cloud/word_cloud_bad.png
+  word_cloud_neutral: artifacts/eda-artifacts/word_cloud/word_cloud_neutral.png
+  word_cloud_good: artifacts/eda-artifacts/word_cloud/word_cloud_good.png
+  confusion_matrix_analysis: artifacts/model-artifacts/confusion_matrix_analysis.png
