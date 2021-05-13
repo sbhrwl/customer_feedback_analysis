@@ -9,10 +9,10 @@ stages:
     - dataset/raw/dataset_raw.csv
 
   clean_data:
-    cmd: python src/clean_data/clean_data.py
+    cmd: python src/preprocessing/clean_data/clean_data.py
     deps:
     - src/get_parameters/get_parameters.py
-    - src/clean_data/clean_data.py
+    - src/preprocessing/clean_data/clean_data.py
     - dataset/raw/dataset_raw.csv
     outs:
     - dataset/processed/basic_cleaning/dataset_no_punctuations.csv
@@ -20,22 +20,31 @@ stages:
     - dataset/processed/basic_cleaning/dataset_no_stop_words.csv
 
   perform_stemming_lemmatization:
-    cmd: python src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
+    cmd: python src/preprocessing/perform_stemming_lemmatization/perform_stemming_lemmatization.py
     deps:
     - src/get_parameters/get_parameters.py
-    - src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
+    - src/preprocessing/perform_stemming_lemmatization/perform_stemming_lemmatization.py
     - dataset/raw/dataset_raw.csv
     outs:
     - dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
     - dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
 
   text_vectorization:
-    cmd: python src/text_vectorization/text_vectorization.py
+    cmd: python src/preprocessing/text_vectorization/text_vectorization.py
     deps:
     - src/get_parameters/get_parameters.py
-    - src/text_vectorization/text_vectorization.py
+    - src/preprocessing/text_vectorization/text_vectorization.py
     - dataset/raw/dataset_raw.csv
     outs:
     - dataset/processed/vectorized/dataset_count_vectorized.csv
     - dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
     - dataset/processed/vectorized/dataset_tfidf_vectorised.csv
+
+  create_features:
+    cmd: python src/preprocessing/create_features/create_features.py
+    deps:
+      - src/get_parameters/get_parameters.py
+      - src/preprocessing/create_features/create_features.py
+      - dataset/raw/dataset_raw.csv
+    outs:
+      - dataset/processed/new_features_added/dataset_with_new_features.csv
