@@ -17,3 +17,14 @@ stages:
     outs:
     - dataset/processed/dataset_no_punctuations.csv
     - dataset/processed/dataset_tokenised.csv
+    - dataset/processed/dataset_no_stop_words.csv
+
+  perform_stemming_lemmatization:
+    cmd: python src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
+    deps:
+    - src/get_parameters/get_parameters.py
+    - src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
+    - dataset/processed/dataset_no_stop_words.csv
+    outs:
+    - dataset/processed/dataset_stemmed.csv
+    - dataset/processed/dataset_lemmatised.csv
