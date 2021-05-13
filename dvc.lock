@@ -16,3 +16,19 @@ stages:
     - path: dataset/raw/dataset_raw.csv
       md5: c153507e15ee827f40edefedb820e12c
       size: 69232
+  clean_data:
+    cmd: python src/clean_data/clean_data.py
+    deps:
+    - path: dataset/raw/dataset_raw.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232
+    - path: src/clean_data/clean_data.py
+      md5: 032350bc12b525a8e9752c884a71118f
+      size: 978
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402
+    outs:
+    - path: dataset/processed/dataset_no_punctuations.csv
+      md5: b716034041fab317f1eb604ce07470f5
+      size: 107106

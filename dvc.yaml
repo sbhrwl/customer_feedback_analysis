@@ -7,3 +7,12 @@ stages:
     - dataset/source/dataset_source.csv
     outs:
     - dataset/raw/dataset_raw.csv
+
+  clean_data:
+    cmd: python src/clean_data/clean_data.py
+    deps:
+    - src/get_parameters/get_parameters.py
+    - src/clean_data/clean_data.py
+    - dataset/raw/dataset_raw.csv
+    outs:
+    - dataset/processed/dataset_no_punctuations.csv
