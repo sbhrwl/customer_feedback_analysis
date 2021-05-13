@@ -2,4 +2,5 @@ dvc
 dvc[gdrive]
 pandas
 numpy
+nltk
 sklearn

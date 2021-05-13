@@ -23,12 +23,15 @@ stages:
       md5: c153507e15ee827f40edefedb820e12c
       size: 69232
     - path: src/clean_data/clean_data.py
-      md5: 032350bc12b525a8e9752c884a71118f
-      size: 978
+      md5: 7023cdaa7c71e20ac2c5ea02e564d581
+      size: 1805
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     outs:
     - path: dataset/processed/dataset_no_punctuations.csv
-      md5: b716034041fab317f1eb604ce07470f5
+      md5: 2c895b3e8e8643e453bcb4d716eb6508
       size: 107106
+    - path: dataset/processed/dataset_tokenised.csv
+      md5: a0de84a42492a8f89991a7bf71949a33
+      size: 166180

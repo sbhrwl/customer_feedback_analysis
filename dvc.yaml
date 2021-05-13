@@ -16,3 +16,4 @@ stages:
     - dataset/raw/dataset_raw.csv
     outs:
     - dataset/processed/dataset_no_punctuations.csv
+    - dataset/processed/dataset_tokenised.csv

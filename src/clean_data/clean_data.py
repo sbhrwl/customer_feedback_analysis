@@ -1,9 +1,13 @@
 import pandas as pd
+import string
+import re
+import nltk
+from nltk.corpus import stopwords
 import sys
 # sys.path.insert(1, './src/get_parameters')
 sys.path.append('./src/get_parameters')
 from get_parameters import get_parameters
-import string
+nltk.download('stopwords')
 
 
 def remove_punctuation(text):
@@ -15,16 +19,31 @@ def remove_punctuation(text):
     return text_no_punctuation
 
 
-def clean_data():
+def tokenize_data(text):
+    # Split on non word (capital W) characters
+    tokens = re.split('\W+', text)
+    return tokens
+
+
+def remove_stop_words(tokenized_text):
+    text_clean = [word for word in tokenized_text if word not in stop_words]
+    return text_clean
+
+
+if __name__ == "__main__":
     config = get_parameters()
     data_path = config["save_raw_data"]["dataset_raw"]
     df = pd.read_csv(data_path, sep=",", encoding='utf-8')
 
-    df['No_Punctuations'] = df['Comment'].apply(lambda x: remove_punctuation(x))
-    # Save Raw dataset to directory "raw"
+    df['NO_Punctuations'] = df['Comment'].apply(lambda x: remove_punctuation(x.lower()))
     dataset_no_punctuations_data_path = config["feature_processing"]["dataset_no_punctuations"]
     df.to_csv(dataset_no_punctuations_data_path, sep=",", index=False)
 
+    df['Tokenized_Data'] = df['NO_Punctuations'].apply(lambda x: tokenize_data(x))
+    dataset_tokenised_data_path = config["feature_processing"]["dataset_tokenised"]
+    df.to_csv(dataset_tokenised_data_path, sep=",", index=False)
 
-if __name__ == "__main__":
-    clean_data()
+    stop_words = stopwords.words('english')
+    df['Stop_Words_Removed'] = df['Tokenized_Data'].apply(lambda x: remove_stop_words(x))
+    dataset_no_stop_words_data_path = config["feature_processing"]["dataset_no_stop_words"]
+    df.to_csv(dataset_no_stop_words_data_path, sep=",", index=False)
