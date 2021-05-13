@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  save_raw_data:
+    cmd: python src/save_raw_data/save_raw_data.py
+    deps:
+    - path: dataset/source/dataset_source.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402
+    - path: src/save_raw_data/save_raw_data.py
+      md5: 022ba31d5ed0685b8ee4f3abee09b938
+      size: 549
+    outs:
+    - path: dataset/raw/dataset_raw.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232

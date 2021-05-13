@@ -13,7 +13,7 @@ def save_raw_data():
 
     # Save Raw dataset to directory "raw"
     raw_data_path = config["save_raw_data"]["dataset_raw"]
-    df.to_csv(raw_data_path, sep=",", index=False, header=new_cols)
+    df.to_csv(raw_data_path, sep=",", index=False)
 
 
 if __name__ == "__main__":
