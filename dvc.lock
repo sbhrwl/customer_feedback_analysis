@@ -29,21 +29,21 @@ stages:
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     outs:
-    - path: dataset/processed/dataset_no_punctuations.csv
+    - path: dataset/processed/basic_cleaning/dataset_no_punctuations.csv
       md5: 2c895b3e8e8643e453bcb4d716eb6508
       size: 107106
-    - path: dataset/processed/dataset_no_stop_words.csv
+    - path: dataset/processed/basic_cleaning/dataset_no_stop_words.csv
       md5: c670ab0f89b988b78bef514a66a92ced
       size: 209974
-    - path: dataset/processed/dataset_tokenised.csv
+    - path: dataset/processed/basic_cleaning/dataset_tokenised.csv
       md5: a0de84a42492a8f89991a7bf71949a33
       size: 166180
   perform_stemming_lemmatization:
     cmd: python src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
     deps:
-    - path: dataset/processed/dataset_no_stop_words.csv
-      md5: c670ab0f89b988b78bef514a66a92ced
-      size: 209974
+    - path: dataset/raw/dataset_raw.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -51,9 +51,31 @@ stages:
       md5: bece65eb8e733a55e18f50e1a14881e7
       size: 1734
     outs:
-    - path: dataset/processed/dataset_lemmatised.csv
+    - path: dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
       md5: b3449cc5c9f91d8a5403513fc3b98fd4
       size: 198081
-    - path: dataset/processed/dataset_stemmed.csv
+    - path: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
       md5: 1bc0856af8a43129a6c57c0c42869e55
       size: 154624
+  text_vectorization:
+    cmd: python src/text_vectorization/text_vectorization.py
+    deps:
+    - path: dataset/raw/dataset_raw.csv
+      md5: c153507e15ee827f40edefedb820e12c
+      size: 69232
+    - path: src/get_parameters/get_parameters.py
+      md5: 32f1461734a131ec933dc5421744e8d5
+      size: 402
+    - path: src/text_vectorization/text_vectorization.py
+      md5: 712f397c432eb9e13ec735576d719047
+      size: 2779
+    outs:
+    - path: dataset/processed/vectorized/dataset_count_vectorized.csv
+      md5: 71be4e99b4d8147e7771f716c63e4d30
+      size: 2575326
+    - path: dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
+      md5: 85863dfef02a03ce26f7d178517a5668
+      size: 5212694
+    - path: dataset/processed/vectorized/dataset_tfidf_vectorised.csv
+      md5: b2fa4d86885957cee0ce9c53136f8259
+      size: 4625625

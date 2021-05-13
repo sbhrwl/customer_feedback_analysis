@@ -10,9 +10,11 @@ save_raw_data:
   dataset_raw: dataset/raw/dataset_raw.csv
 
 feature_processing:
-  dataset_no_punctuations: dataset/processed/dataset_no_punctuations.csv
-  dataset_tokenised: dataset/processed/dataset_tokenised.csv
-  dataset_no_stop_words: dataset/processed/dataset_no_stop_words.csv
-  dataset_stemmed: dataset/processed/dataset_stemmed.csv
-  dataset_lemmatised: dataset/processed/dataset_lemmatised.csv
-  dataset_clean: dataset/processed/dataset_clean.csv
+  dataset_no_punctuations: dataset/processed/basic_cleaning/dataset_no_punctuations.csv
+  dataset_tokenised: dataset/processed/basic_cleaning/dataset_tokenised.csv
+  dataset_no_stop_words: dataset/processed/basic_cleaning/dataset_no_stop_words.csv
+  dataset_stemmed: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
+  dataset_lemmatised: dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
+  dataset_count_vectorized: dataset/processed/vectorized/dataset_count_vectorized.csv
+  dataset_ngram_count_vectorized: dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
+  dataset_tfidf_vectorised: dataset/processed/vectorized/dataset_tfidf_vectorised.csv

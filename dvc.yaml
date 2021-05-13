@@ -15,16 +15,27 @@ stages:
     - src/clean_data/clean_data.py
     - dataset/raw/dataset_raw.csv
     outs:
-    - dataset/processed/dataset_no_punctuations.csv
-    - dataset/processed/dataset_tokenised.csv
-    - dataset/processed/dataset_no_stop_words.csv
+    - dataset/processed/basic_cleaning/dataset_no_punctuations.csv
+    - dataset/processed/basic_cleaning/dataset_tokenised.csv
+    - dataset/processed/basic_cleaning/dataset_no_stop_words.csv
 
   perform_stemming_lemmatization:
     cmd: python src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
     deps:
     - src/get_parameters/get_parameters.py
     - src/perform_stemming_lemmatization/perform_stemming_lemmatization.py
-    - dataset/processed/dataset_no_stop_words.csv
+    - dataset/raw/dataset_raw.csv
     outs:
-    - dataset/processed/dataset_stemmed.csv
-    - dataset/processed/dataset_lemmatised.csv
+    - dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
+    - dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
+
+  text_vectorization:
+    cmd: python src/text_vectorization/text_vectorization.py
+    deps:
+    - src/get_parameters/get_parameters.py
+    - src/text_vectorization/text_vectorization.py
+    - dataset/raw/dataset_raw.csv
+    outs:
+    - dataset/processed/vectorized/dataset_count_vectorized.csv
+    - dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
+    - dataset/processed/vectorized/dataset_tfidf_vectorised.csv

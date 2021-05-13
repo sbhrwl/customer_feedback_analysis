@@ -2,3 +2,6 @@
 /dataset_tokenised.csv
 /dataset_stemmed.csv
 /dataset_lemmatised.csv
+/dataset_count_vectorized.csv
+/dataset_ngram_count_vectorized.csv
+/dataset_tfidf_vectorised.csv
