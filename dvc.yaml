@@ -77,3 +77,13 @@ stages:
       - dataset/raw/dataset_raw.csv
     outs:
     - artifacts/model-artifacts/confusion_matrix_analysis.png
+
+  pycaret_automl:
+    cmd: python src/pycaret_auto_ml/pycaret_auto_ml.py
+    deps:
+      - src/get_parameters/get_parameters.py
+      - src/pycaret_auto_ml/pycaret_auto_ml.py
+      - dataset/raw/dataset_raw.csv
+    outs:
+      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_regressor-output-file.txt
+      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_best_model-output-file.txt

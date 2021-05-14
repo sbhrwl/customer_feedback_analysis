@@ -8,3 +8,5 @@ matplotlib
 wordcloud
 seaborn
 eli5
+pycaret
+mlflow
