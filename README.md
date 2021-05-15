@@ -134,3 +134,16 @@ Create a pipeline with TfIdf and Logistic Regression, followed by evaluation of 
 ### Results
 
  1. Confusion Matrix: artifacts/model-artifacts/confusion_matrix_analysis.png
+
+## Stage 8: pycaret_auto_ml
+
+Topic Modelling with LDA using Pycaret together with MLflow
+
+```bash
+mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts/mlflow-artifacts --host 0.0.0.0 -p 1234
+```
+
+### Results
+
+Verify Exeperiment results on Ml flow UI: localhost:1234
+ 1. Confusion Matrix: artifacts/model-artifacts/confusion_matrix_analysis.png
