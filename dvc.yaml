@@ -84,6 +84,6 @@ stages:
       - src/get_parameters/get_parameters.py
       - src/pycaret_auto_ml/pycaret_auto_ml.py
       - dataset/raw/dataset_raw.csv
-    outs:
-      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_regressor-output-file.txt
-      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_best_model-output-file.txt
+#    outs:
+#      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_regressor-output-file.txt
+#      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_best_model-output-file.txt
