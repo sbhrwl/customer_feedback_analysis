@@ -146,4 +146,3 @@ mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./
 ### Results
 
 Verify Exeperiment results on Ml flow UI: localhost:1234
- 1. Confusion Matrix: artifacts/model-artifacts/confusion_matrix_analysis.png
