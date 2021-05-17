@@ -17,10 +17,6 @@ Install the req
 pip install -r requirements.txt
 ```
 
-```bash
-pip uninstall lazypredict
-```
-
 ## Commit 
 If you plan to add changes on top of the project
 
@@ -88,7 +84,7 @@ dvc repro
 
 ### Results
 
-1. Porter Stammer data: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
+1. Porter Stemmer data: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
 
 2. WordNet Lemmatised data: dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
 
