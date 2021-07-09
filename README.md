@@ -2,6 +2,7 @@
 Utility performs survey time to time to get feedback from the customers. Build a machine learning system, to automatically classify the feedback received from the customer
 
 * [Model Pipeline](#model-pipeline)
+* [AutoML with Pycaret and MlFlow](#automl-with-pycaret-and-mlflow)
 * [Project Setup](#project-setup)
 
 # Model Pipeline
@@ -41,12 +42,14 @@ Utility performs survey time to time to get feedback from the customers. Build a
 ### Results
 * Word Cloud for Comments and Rating as 4: artifacts/eda-artifacts/word_cloud/word_cloud_good.png
 
-## Stage 7: train_and_evaluate
+## Stage 7: Train model
 Create a pipeline with TfIdf and Logistic Regression, followed by evaluation of results
+
+## Stage 8: Evaluate model
 ### Results
 * Confusion Matrix: artifacts/model-artifacts/confusion_matrix_analysis.png
 
-## Stage 8: pycaret_auto_ml
+# AutoML with Pycaret and MlFlow
 Topic Modelling with LDA using Pycaret together with MLflow
 ```bash
 mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts/mlflow-artifacts --host 0.0.0.0 -p 1234
