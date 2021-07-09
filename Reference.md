@@ -1,6 +1,5 @@
 # Overview
-The project details about basic startegy to adopt for NLP models.
-Various stages implemented in the project
+Strategy for NLP models.
 * Saving dataset (save_raw_data.py)
 * Feature processing
   * Clean data
@@ -19,5 +18,6 @@ Various stages implemented in the project
     * Percentage of Punctuations
 * Analysis of Features
 * Create Word Cloud
-* Training and Evaluating Model
+* Training Model
+* Evaluating Model
   * Generate Confusion Matrix
