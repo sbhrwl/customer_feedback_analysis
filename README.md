@@ -1,95 +1,10 @@
-# NLP: Sentiment Analysis Project
+# Customer feedback analysis
+Utility performs survey time to time to get feedback from the customers. Build a machine learning system, to automatically classify the feedback received from the customer
 
-# E2E Project
-* [Overview](#overview)
+* [Model Pipeline](#model-pipeline)
 * [Project Setup](#project-setup)
-* [DVC Initialisation](#dvc-initialisation)
-* [Pipeline](#pipeline)
 
-# Overview
-The project details about basic startegy to adopt for NLP models.
-Various stages implemented in the project
-* Saving dataset (save_raw_data.py)
-* Feature processing
-  * Clean data
-    * Remove Punctuations
-    * Tokenize data
-    * Remove Stop words
-  * Enhancing dataset
-    * Stemming
-    * Lemmitisation
-  * Create Vectors
-    * Count Vectorizer
-    * Count Vectorizer with **n** grams
-    * TfIdf
-  * Add new features
-    * Length of Comment
-    * Percentage of Punctuations
-* Analysis of Features
-* Create Word Cloud
-* Training and Evaluating Model
-  * Generate Confusion Matrix
-* Pycaret automl
-
-# Project Setup
-* Create environment
-```bash
-conda create -n nlp-project python=3.7 -y
-```
-* Activate environment
-```bash
-conda activate nlp-project
-```
-* Install the requirements
-```bash
-pip install -r requirements.txt
-```
-* GIT initialisation
-  If you plan to add changes on top of the project
-  * Create your project in the Github, note down repository link
-  * Perform a commit
-```bash
-git init
-git add .
-git commit -m "first commit"
-
-git branch -M main
-git remote add origin https://github.com/<githubAccount>/<githubRepo>
-git push origin main
-```
-
-# DVC Initialisation
-* Download the data from 
-  * https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
-* Initialise DVC
-```bash
-dvc init 
-```
-* Add files to dvc
-```bash
-dvc add data_given/dataset_reviews.csv
-```
-```bash
-git add .
-```
-```bash
-git commit -m "first commit"
-```
-* Oneliner updates  for readme
-```bash
-git add . && git commit -m "update Readme.md"
-```
-```bash
-git remote add origin https://github.com/sbhrwl/nlp-project.git
-git branch -M main
-git push origin main
-```
-## Executing Pipeline
-```bash
-dvc repro
-```
-
-# Pipeline
+# Model Pipeline
 ## Stage 1: save_raw_data
 ### Results
 * Cleaned data: dataset/raw/dataset_raw.csv
@@ -138,3 +53,46 @@ mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./
 ```
 ### Results
 Verify Exeperiment results on Ml flow UI: localhost:1234
+
+# Project Setup
+* Create environment
+```bash
+conda create -n customer-feedback python=3.7 -y
+```
+* Activate environment
+```bash
+conda activate customer-feedback
+```
+* Install the requirements
+```bash
+pip install -r requirements.txt
+```
+* GIT initialisation
+  If you plan to add changes on top of the project
+  * Create your project in the Github, note down repository link
+  * Perform a commit
+```bash
+git init
+git add .
+git commit -m "first commit"
+
+git branch -M main
+git remote add origin https://github.com/<githubAccount>/<githubRepo>
+git push origin main
+```
+
+* DVC Initialisation
+  * Download the data from 
+    * https://drive.google.com/drive/folders/18zqQiCJVgF7uzXgfbIJ-04zgz1ItNfF5?usp=sharing
+  * Initialise DVC
+    ```bash
+    dvc init 
+    ```
+  * Add files to dvc
+    ```bash
+    dvc add data_source/feedback.csv
+    ```
+## Executing Pipeline
+```bash
+dvc repro
+```
