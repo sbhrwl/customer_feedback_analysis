@@ -43,7 +43,7 @@ Utility performs survey time to time to get feedback from the customers. Build a
 * Word Cloud for Comments and Rating as 4: artifacts/eda-artifacts/word_cloud/word_cloud_good.png
 
 ## Stage 7: Train model
-Create a pipeline with TfIdf and Logistic Regression, followed by evaluation of results
+Create a pipeline with TfIdf and Logistic Regression
 
 ## Stage 8: Evaluate model
 ### Results
