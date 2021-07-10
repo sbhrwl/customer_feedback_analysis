@@ -1,0 +1,25 @@
+2021-07-10 20:38:11,235:INFO:PyCaret NLP Module
+2021-07-10 20:38:11,235:INFO:version 2.3.1
+2021-07-10 20:38:11,235:INFO:Initializing setup()
+2021-07-10 20:38:11,235:INFO:USI: 6671
+2021-07-10 20:38:11,235:INFO:setup(data=(498, 2), target=Comment, custom_stopwords=None, html=True, session_id=None, log_experiment=True,
+                    experiment_name=LDA-Topic Modeling, log_plots=False, log_data=False, verbose=True)
+2021-07-10 20:38:11,235:INFO:Checking environment
+2021-07-10 20:38:11,235:INFO:python_version: 3.8.10
+2021-07-10 20:38:11,235:INFO:python_build: ('default', 'May 19 2021 13:12:57')
+2021-07-10 20:38:11,235:INFO:machine: AMD64
+2021-07-10 20:38:11,250:INFO:platform: Windows-10-10.0.19041-SP0
+2021-07-10 20:38:11,266:INFO:Memory: svmem(total=17084796928, available=10976243712, percent=35.8, used=6108553216, free=10976243712)
+2021-07-10 20:38:11,266:INFO:Physical Core: 2
+2021-07-10 20:38:11,266:INFO:Logical Core: 4
+2021-07-10 20:38:11,266:INFO:Checking libraries
+2021-07-10 20:38:11,266:INFO:pd==1.2.4
+2021-07-10 20:38:11,266:INFO:numpy==1.19.5
+2021-07-10 20:38:12,090:INFO:gensim==3.8.3
+2021-07-10 20:38:12,739:INFO:spacy==2.3.5
+2021-07-10 20:38:13,271:INFO:nltk==3.6.2
+2021-07-10 20:38:13,325:INFO:textblob==0.15.3
+2021-07-10 20:38:13,710:INFO:pyLDAvis==3.2.2
+2021-07-10 20:38:13,895:INFO:wordcloud==1.8.1
+2021-07-10 20:38:13,895:INFO:mlflow==1.18.0
+2021-07-10 20:38:13,895:INFO:Checking Exceptions

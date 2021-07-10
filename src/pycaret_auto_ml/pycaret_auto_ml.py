@@ -1,10 +1,7 @@
 import pandas as pd
 import mlflow
 from pycaret.nlp import *
-import sys
-# sys.path.insert(1, './src/get_parameters')
-sys.path.append('./src/get_parameters')
-from get_parameters import get_parameters
+from src.get_parameters.get_parameters import get_parameters
 
 
 def topic_modelling_pycaret(dataframe):

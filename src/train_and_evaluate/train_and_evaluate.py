@@ -7,10 +7,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 import seaborn as sns
 from matplotlib import pyplot as plt
 import eli5
-import sys
-# sys.path.insert(1, './src/get_parameters')
-sys.path.append('./src/get_parameters')
-from get_parameters import get_parameters
+from src.get_parameters.get_parameters import get_parameters
 
 
 if __name__ == "__main__":

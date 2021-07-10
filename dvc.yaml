@@ -69,21 +69,21 @@ stages:
     outs:
       - artifacts/eda-artifacts/word_cloud/word_cloud_good.png
 
-  train_and_evaluate:
-    cmd: python src/train_and_evaluate/train_and_evaluate.py
-    deps:
-      - src/get_parameters/get_parameters.py
-      - src/train_and_evaluate/train_and_evaluate.py
-      - dataset/raw/dataset_raw.csv
-    outs:
-    - artifacts/model-artifacts/confusion_matrix_analysis.png
-
-  pycaret_automl:
-    cmd: python src/pycaret_auto_ml/pycaret_auto_ml.py
-    deps:
-      - src/get_parameters/get_parameters.py
-      - src/pycaret_auto_ml/pycaret_auto_ml.py
-      - dataset/raw/dataset_raw.csv
+#  train_and_evaluate:
+#    cmd: python src/train_and_evaluate/train_and_evaluate.py
+#    deps:
+#      - src/get_parameters/get_parameters.py
+#      - src/train_and_evaluate/train_and_evaluate.py
+#      - dataset/raw/dataset_raw.csv
+#    outs:
+#    - artifacts/model-artifacts/confusion_matrix_analysis.png
+#
+#  pycaret_automl:
+#    cmd: python src/pycaret_auto_ml/pycaret_auto_ml.py
+#    deps:
+#      - src/get_parameters/get_parameters.py
+#      - src/pycaret_auto_ml/pycaret_auto_ml.py
+#      - dataset/raw/dataset_raw.csv
 #    outs:
 #      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_regressor-output-file.txt
 #      - artifacts/automl-artifacts/pycaret_artifacts/pycaret_best_model-output-file.txt

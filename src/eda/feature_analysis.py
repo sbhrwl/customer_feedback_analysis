@@ -1,11 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot
 import numpy as np
-# %matplotlib inline
-import sys
-# sys.path.insert(1, './src/get_parameters')
-sys.path.append('./src/get_parameters')
-from get_parameters import get_parameters
+from src.get_parameters.get_parameters import get_parameters
 
 
 def message_length_analysis(dataframe, file_to_create):

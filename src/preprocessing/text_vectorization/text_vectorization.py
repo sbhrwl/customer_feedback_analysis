@@ -2,13 +2,11 @@ import pandas as pd
 import string
 import re
 import nltk
+
 nltk.download('stopwords')
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
-import sys
-# sys.path.insert(1, './src/get_parameters')
-sys.path.append('./src/get_parameters')
-from get_parameters import get_parameters
+from src.get_parameters.get_parameters import get_parameters
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
