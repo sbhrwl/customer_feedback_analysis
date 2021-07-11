@@ -4,6 +4,7 @@ Utility performs survey time to time to get feedback from the customers. Build a
 * [Model Pipeline](#model-pipeline)
 * [AutoML with Pycaret and MlFlow](#automl-with-pycaret-and-mlflow)
 * [Project Setup](#project-setup)
+* [Training and Prediction endpoint](#training-and-prediction-endpoint)
 
 # Model Pipeline
 ## Stage 1: Save raw data (save_raw_data.py)
@@ -147,3 +148,7 @@ git push origin main
 ```bash
 dvc repro
 ```
+
+# Training and Prediction endpoint
+* localhost:5000/train
+* localhost:5000/predict
