@@ -4,8 +4,8 @@ stages:
     cmd: python src/save_raw_data/save_raw_data.py
     deps:
     - path: dataset/source/dataset_source.csv
-      md5: 342ea6caf4daa589817ccef0c7142f57
-      size: 69229
+      md5: 1f5dc1a7bc3df48853a09948db93e939
+      size: 69419
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -14,14 +14,14 @@ stages:
       size: 467
     outs:
     - path: dataset/raw/dataset_raw.csv
-      md5: 342ea6caf4daa589817ccef0c7142f57
-      size: 69229
+      md5: 1f5dc1a7bc3df48853a09948db93e939
+      size: 69419
   clean_data:
     cmd: python src/preprocessing/clean_data/clean_data.py
     deps:
     - path: dataset/raw/dataset_raw.csv
-      md5: c153507e15ee827f40edefedb820e12c
-      size: 69232
+      md5: 1f5dc1a7bc3df48853a09948db93e939
+      size: 69419
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -30,20 +30,20 @@ stages:
       size: 1725
     outs:
     - path: dataset/processed/basic_cleaning/dataset_no_punctuations.csv
-      md5: 2c895b3e8e8643e453bcb4d716eb6508
-      size: 107106
+      md5: c0b3e41cdfde75b3471cf874c745bbea
+      size: 107427
     - path: dataset/processed/basic_cleaning/dataset_no_stop_words.csv
-      md5: c670ab0f89b988b78bef514a66a92ced
-      size: 209974
+      md5: 647d8ba2edd6f25b79e18aaf71ee87b3
+      size: 210652
     - path: dataset/processed/basic_cleaning/dataset_tokenised.csv
-      md5: a0de84a42492a8f89991a7bf71949a33
-      size: 166180
+      md5: ceccd5bb7fe2d09958cb4bb3300801c7
+      size: 166704
   perform_stemming_lemmatization:
     cmd: python src/preprocessing/perform_stemming_lemmatization/perform_stemming_lemmatization.py
     deps:
     - path: dataset/raw/dataset_raw.csv
-      md5: 342ea6caf4daa589817ccef0c7142f57
-      size: 69229
+      md5: 1f5dc1a7bc3df48853a09948db93e939
+      size: 69419
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -52,17 +52,17 @@ stages:
       size: 1654
     outs:
     - path: dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
-      md5: e1dccebdb746acfa7cbb4692f5d52884
-      size: 198078
+      md5: 648f86d77a0ebdd4b07c42b4d8457cd7
+      size: 198714
     - path: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
-      md5: 323464cb10ab3ea3f9aacebae5c9107e
-      size: 154621
+      md5: e3c2124ad8223b8770f1d14a4c173c48
+      size: 155106
   text_vectorization:
     cmd: python src/preprocessing/text_vectorization/text_vectorization.py
     deps:
     - path: dataset/raw/dataset_raw.csv
-      md5: 342ea6caf4daa589817ccef0c7142f57
-      size: 69229
+      md5: 1f5dc1a7bc3df48853a09948db93e939
+      size: 69419
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -71,20 +71,20 @@ stages:
       size: 2812
     outs:
     - path: dataset/processed/vectorized/dataset_count_vectorized.csv
-      md5: 71be4e99b4d8147e7771f716c63e4d30
-      size: 2575326
+      md5: 778ac274301504d37702e878f4c1ff20
+      size: 2589515
     - path: dataset/processed/vectorized/dataset_ngram_count_vectorized.csv
-      md5: 85863dfef02a03ce26f7d178517a5668
-      size: 5212694
+      md5: fcb48addab1282350c968702965a5fd4
+      size: 5244263
     - path: dataset/processed/vectorized/dataset_tfidf_vectorised.csv
-      md5: b2fa4d86885957cee0ce9c53136f8259
-      size: 4625625
+      md5: 197f9532c96cf41a6ea373986082fa20
+      size: 4651031
   create_features:
     cmd: python src/preprocessing/create_features/create_features.py
     deps:
     - path: dataset/processed/stemmed_lemmatised/dataset_lemmatised.csv
-      md5: e1dccebdb746acfa7cbb4692f5d52884
-      size: 198078
+      md5: 648f86d77a0ebdd4b07c42b4d8457cd7
+      size: 198714
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
@@ -93,14 +93,14 @@ stages:
       size: 1234
     outs:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
-      md5: d09c3000dba8819e571d02c1a02dd777
-      size: 208034
+      md5: 8c194cced5668a8707502205ecdb9e8b
+      size: 208693
   feature_analysis:
     cmd: python src/eda/feature_analysis.py
     deps:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
-      md5: d09c3000dba8819e571d02c1a02dd777
-      size: 208034
+      md5: 8c194cced5668a8707502205ecdb9e8b
+      size: 208693
     - path: src/eda/feature_analysis.py
       md5: 89b652ad5a681f5a98ad30f3d2bcb6d2
       size: 2395
@@ -112,40 +112,40 @@ stages:
       md5: 440849ecc9803decb327b1013dddc05f
       size: 10085
     - path: artifacts/eda-artifacts/histograms/message_length_logarithmic_analysis.png
-      md5: e9cc91b005e37318dd34851385609789
-      size: 15125
+      md5: 3a6fef06dc3eaf24e79e242b3ae88edc
+      size: 15124
     - path: artifacts/eda-artifacts/histograms/punctuation_percent_analysis.png
-      md5: 845fd4cc58368ddbcfcef14f8f7ba773
-      size: 18118
+      md5: 4c07cdad509eafdbea1f5a7af32f91f3
+      size: 18068
   create_word_cloud:
     cmd: python src/eda/create_word_cloud.py
     deps:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
-      md5: 1bbda9ef0056fbfa81e4b8f212fd4e7e
-      size: 79188
+      md5: 8c194cced5668a8707502205ecdb9e8b
+      size: 208693
     - path: src/eda/create_word_cloud.py
-      md5: c60155cb262add525bf8d6b22d884bab
-      size: 1291
+      md5: 4648a61e0dd232d2b97679b8331835b8
+      size: 1288
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     outs:
     - path: artifacts/eda-artifacts/word_cloud/word_cloud_good.png
-      md5: 9537a276c3936fd801ea2c36978d22c5
-      size: 325165
+      md5: de75cac1a9ebe432eb31e15edf43ca2b
+      size: 352044
   train_and_evaluate:
     cmd: python src/train_and_evaluate/train_and_evaluate.py
     deps:
     - path: dataset/processed/new_features_added/dataset_with_new_features.csv
-      md5: d09c3000dba8819e571d02c1a02dd777
-      size: 208034
+      md5: 8c194cced5668a8707502205ecdb9e8b
+      size: 208693
     - path: src/get_parameters/get_parameters.py
       md5: 32f1461734a131ec933dc5421744e8d5
       size: 402
     - path: src/train_and_evaluate/train_and_evaluate.py
-      md5: c59787cbb5a1829800d8d1bd1b987da6
-      size: 2289
+      md5: 82939a0e9d44fe875acca138abdce8f3
+      size: 1670
     outs:
     - path: artifacts/model-artifacts/confusion_matrix_analysis.png
-      md5: a17b7ae50ab82f305b21af66f721517c
-      size: 11914
+      md5: 9344013025ed6b90365ab8a4276a1e0a
+      size: 12064

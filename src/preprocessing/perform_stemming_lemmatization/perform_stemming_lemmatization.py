@@ -29,7 +29,7 @@ def perform_lemmatisation(text):
     return lemmatised_text
 
 
-if __name__ == "__main__":
+def perform_stemming_lemmatization():
     config = get_parameters()
     data_path = config["save_raw_data"]["dataset_raw"]
     df = pd.read_csv(data_path, sep=",", encoding='utf-8')
@@ -43,3 +43,7 @@ if __name__ == "__main__":
     df['Lemmatized_data'] = df['Stop_Words_Removed'].apply(lambda x: perform_lemmatisation(x))
     dataset_lemmatised_data_path = config["feature_processing"]["dataset_lemmatised"]
     df.to_csv(dataset_lemmatised_data_path, sep=",", index=False)
+
+
+if __name__ == "__main__":
+    perform_stemming_lemmatization()

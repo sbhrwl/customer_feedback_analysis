@@ -23,11 +23,12 @@ def tokenize_data(text):
 
 
 def remove_stop_words(tokenized_text):
+    stop_words = stopwords.words('english')
     text_clean = [word for word in tokenized_text if word not in stop_words]
     return text_clean
 
 
-if __name__ == "__main__":
+def clean_data():
     config = get_parameters()
     data_path = config["save_raw_data"]["dataset_raw"]
     df = pd.read_csv(data_path, sep=",", encoding='utf-8')
@@ -40,7 +41,10 @@ if __name__ == "__main__":
     dataset_tokenised_data_path = config["feature_processing"]["dataset_tokenised"]
     df.to_csv(dataset_tokenised_data_path, sep=",", index=False)
 
-    stop_words = stopwords.words('english')
     df['Stop_Words_Removed'] = df['Tokenized_Data'].apply(lambda x: remove_stop_words(x))
     dataset_no_stop_words_data_path = config["feature_processing"]["dataset_no_stop_words"]
     df.to_csv(dataset_no_stop_words_data_path, sep=",", index=False)
+
+
+if __name__ == "__main__":
+    clean_data()

@@ -10,3 +10,6 @@ seaborn
 eli5
 pycaret
 mlflow
+flask
+flask-cors
+flask_monitoringdashboard
