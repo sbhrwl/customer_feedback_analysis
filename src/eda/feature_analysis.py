@@ -6,26 +6,26 @@ from src.get_parameters.get_parameters import get_parameters
 
 def message_length_analysis(dataframe, file_to_create):
     bins = np.linspace(0, 100, 30)  # Assumption, Max Length  of message is 100 and create 30 bins
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 0]['Message_length'], bins, label='bad')
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 2]['Message_length'], bins, label='neutral')
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 4]['Message_length'], bins, label='good')
+    pyplot.hist(dataframe[dataframe['Review'] == 0]['Message_length'], bins, label='bad')
+    pyplot.hist(dataframe[dataframe['Review'] == 2]['Message_length'], bins, label='neutral')
+    pyplot.hist(dataframe[dataframe['Review'] == 4]['Message_length'], bins, label='good')
     pyplot.legend(loc='upper right')
     pyplot.savefig(file_to_create)
 
 
 def message_length_logarithmic_analysis(dataframe, file_to_create):
-    dataframe.loc[dataframe['Sentiment'] == 0, 'Comment'].str.len().apply(np.log1p).hist(label='bad', alpha=.5)
-    dataframe.loc[dataframe['Sentiment'] == 2, 'Comment'].str.len().apply(np.log1p).hist(label='neutral', alpha=.5)
-    dataframe.loc[dataframe['Sentiment'] == 4, 'Comment'].str.len().apply(np.log1p).hist(label='good', alpha=.5)
+    dataframe.loc[dataframe['Review'] == 0, 'Comment'].str.len().apply(np.log1p).hist(label='bad', alpha=.5)
+    dataframe.loc[dataframe['Review'] == 2, 'Comment'].str.len().apply(np.log1p).hist(label='neutral', alpha=.5)
+    dataframe.loc[dataframe['Review'] == 4, 'Comment'].str.len().apply(np.log1p).hist(label='good', alpha=.5)
     pyplot.legend(loc='upper right')
     pyplot.savefig(file_to_create)
 
 
 def punctuation_percent_analysis(dataframe, file_to_create):
     bins = np.linspace(0, 100, 30)
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 0]['Punctuation_Percent'], bins, label='bad')
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 2]['Punctuation_Percent'], bins, label='neutral')
-    pyplot.hist(dataframe[dataframe['Sentiment'] == 4]['Punctuation_Percent'], bins, label='good')
+    pyplot.hist(dataframe[dataframe['Review'] == 0]['Punctuation_Percent'], bins, label='bad')
+    pyplot.hist(dataframe[dataframe['Review'] == 2]['Punctuation_Percent'], bins, label='neutral')
+    pyplot.hist(dataframe[dataframe['Review'] == 4]['Punctuation_Percent'], bins, label='good')
     pyplot.legend(loc='upper right')
     pyplot.savefig(file_to_create)
 

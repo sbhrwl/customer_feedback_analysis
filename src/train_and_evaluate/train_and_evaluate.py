@@ -9,12 +9,12 @@ from matplotlib import pyplot as plt
 import eli5
 from src.get_parameters.get_parameters import get_parameters
 
-
 if __name__ == "__main__":
     config = get_parameters()
-    dataset_raw_path = config["save_raw_data"]["dataset_raw"]
+    data_path = config["feature_processing"]["dataset_with_new_features"]
     confusion_matrix_analysis_path = config["feature_analysis"]["confusion_matrix_analysis"]
-    df = pd.read_csv(dataset_raw_path, sep=",", encoding='utf-8', usecols=['Sentiment', 'Comment'])
+    df = pd.read_csv(data_path, sep=",", encoding='utf-8',
+                     usecols=['Review', 'Comment', 'Lemmatized_data', 'Message_length', 'Punctuation_Percent'])
     df = df
     print(df.head())
     tf_idf = TfidfVectorizer(ngram_range=(1, 2),
@@ -27,25 +27,28 @@ if __name__ == "__main__":
                             random_state=17,
                             verbose=1)
 
-    tfidf_logit_pipeline = Pipeline([('tf_idf', tf_idf),
-                                     ('lr', lr)])
+    tfidf_logistic_pipeline = Pipeline([('tf_idf', tf_idf),
+                                        ('lr', lr)])
 
-    X_train, X_test, y_train, y_test = train_test_split(df['Comment'], df['Sentiment'], random_state=17)
+    # X = df[['Lemmatized_data', 'Message_length', 'Punctuation_Percent']]
+    X = df['Lemmatized_data']
+    y = df['Review']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=17)
 
-    tfidf_logit_pipeline.fit(X_train, y_train)
+    tfidf_logistic_pipeline.fit(X_train, y_train)
 
-    y_pred = tfidf_logit_pipeline.predict(X_test)
-    y_proba = tfidf_logit_pipeline.predict_proba(X_test)
+    y_predicted = tfidf_logistic_pipeline.predict(X_test)
+    y_probability = tfidf_logistic_pipeline.predict_proba(X_test)
 
     # Accuracy Score
-    accuracy_score(y_test, y_pred)
+    accuracy_score(y_test, y_predicted)
 
-    cm = confusion_matrix(y_pred, y_test)
+    cm = confusion_matrix(y_predicted, y_test)
     print(cm)
     sns.heatmap(cm, annot=True)
     plt.savefig(confusion_matrix_analysis_path)
-    print(classification_report(y_pred, y_test))
+    print(classification_report(y_predicted, y_test))
 
     # show_weights works with Notebook
-    # print(eli5.show_weights(estimator=tfidf_logit_pipeline.named_steps['lr'],
-    #                   vec=tfidf_logit_pipeline.named_steps['tf_idf']))
+    # print(eli5.show_weights(estimator=tfidf_logistic_pipeline.named_steps['lr'],
+    #                   vec=tfidf_logistic_pipeline.named_steps['tf_idf']))

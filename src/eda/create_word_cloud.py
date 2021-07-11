@@ -14,7 +14,7 @@ def create_word_cloud(dataframe, file_to_create):
                           height=400)
 
     plt.figure(figsize=(16, 12))
-    wordcloud.generate(str(dataframe.loc[dataframe['Sentiment'] == 4, 'Comment']))
+    wordcloud.generate(str(dataframe.loc[dataframe['Review'] == 4, 'Comment']))
     plt.imshow(wordcloud)
     plt.title('Word Cloud for Good Reviews')
     plt.savefig(file_to_create)
