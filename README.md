@@ -13,18 +13,20 @@ Utility performs survey time to time to get feedback from the customers. Build a
 ## Stage 2: Basic cleaning operations (clean_data.py)
 * Original Feedback
   ```
-  "@stellargirl I loooooooovvvvvveee my Kindle2. Not that the DX is cool, but the 2 is fantastic in its own right."
+  "It offers all your essential services in one, and sells energy bundled with broadband, home phone, mobile, home insurance and boiler care."
   ```
 * Punctuations removed
   ```
-  stellargirl i loooooooovvvvvveee my kindle2 not that the dx is cool but the 2 is fantastic in its own right,"
+  "it offers all your essential services in one and sells energy bundled with broadband home phone mobile home insurance and boiler care"
   ```
 * Tokenized feedback
   ```
-  ['stellargirl', 'i', 'loooooooovvvvvveee', 'my', 'kindle2', 'not', 'that', 'the', 'dx', 'is', 'cool', 'but', 'the', '2', 'is', 'fantastic', 'in', 'its', 'own', 'right']","     ```
+  ['it', 'offers', 'all', 'your', 'essential', 'services', 'in', 'one', 'and', 'sells', 'energy', 'bundled', 'with', 'broadband', 'home', 'phone', 'mobile', 'home', 'insurance', 'and', 'boiler', 'care']
+  ```
 * Stop words removed from feedback
   ```
-  ['stellargirl', 'loooooooovvvvvveee', 'kindle2', 'dx', 'cool', '2', 'fantastic', 'right']"
+  ['offers', 'essential', 'services', 'one', 'sells', 'energy', 'bundled', 'broadband', 'home', 'phone', 'mobile', 'home', 'insurance', 'boiler', 'care']
+  ```
 
 ### Results
 * Cleaned data: dataset/processed/basic_cleaning/dataset_no_punctuations.csv
@@ -34,11 +36,11 @@ Utility performs survey time to time to get feedback from the customers. Build a
 ## Stage 3: Perform stemming and Lemmatization (perform_stemming_lemmatization.py)
 * Stemmed feedback
   ```
-  "['stellargirl', 'loooooooovvvvvvee', 'kindle2', 'dx', 'cool', '2', 'fantast', 'right']"
+  ['offer', 'essenti', 'servic', 'one', 'sell', 'energi', 'bundl', 'broadband', 'home', 'phone', 'mobil', 'home', 'insur', 'boiler', 'care']
   ```
 * Lemmatized feedback
   ```
-  "['stellargirl', 'loooooooovvvvvveee', 'kindle2', 'dx', 'cool', '2', 'fantastic', 'right']"
+  ['offer', 'essential', 'service', 'one', 'sell', 'energy', 'bundled', 'broadband', 'home', 'phone', 'mobile', 'home', 'insurance', 'boiler', 'care']
   ```
 ### Results
 * Porter Stemmer data: dataset/processed/stemmed_lemmatised/dataset_stemmed.csv
@@ -80,12 +82,15 @@ Create a pipeline with TfIdf and Logistic Regression
                             random_state=17,
                             verbose=1)
 
-    tfidf_logit_pipeline = Pipeline([('tf_idf', tf_idf),
-                                     ('lr', lr)])
+    tfidf_logistic_pipeline = Pipeline([('tf_idf', tf_idf),
+                                        ('lr', lr)])
 
-    X_train, X_test, y_train, y_test = train_test_split(df['Comment'], df['Sentiment'], random_state=17)
+    # X = df[['Lemmatized_data', 'Message_length', 'Punctuation_Percent']]
+    X = df['Lemmatized_data']
+    y = df['Review']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=17)
 
-    tfidf_logit_pipeline.fit(X_train, y_train)
+    tfidf_logistic_pipeline.fit(X_train, y_train)
 ```
 
 ## Stage 8: Evaluate model
