@@ -1,3 +1,24 @@
+- Word Embedding 
+- NLTK
+- SPACY
+- RNN
+- LSTM
+- GPU
+- SEQ to SEQ
+- ENCODER/DECODER
+- ATTENTION
+- SELF ATTENTION
+- TRANSFORMWR FAMILY
+  - BERT
+  - GPT
+  - ALBERT
+  - ROBERT
+- NLP PROJECTS 
+
+Levihsteim distance between words 
+
+Embedding (TFIDF/ OHE)
+
 # Customer feedback analysis
 Utility performs survey time to time to get feedback from the customers. Build a machine learning system, to automatically classify the feedback received from the customer
 
