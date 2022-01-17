@@ -1,5 +1,8 @@
 # Overview
-Strategy for NLP models.
+- [Strategy for NLP models](#strategy-for-nlp-models)
+- [Projects](#projects)
+
+## Strategy for NLP models
 * Saving dataset (save_raw_data.py)
 * Feature processing
   * Clean data
@@ -21,3 +24,6 @@ Strategy for NLP models.
 * Training Model
 * Evaluating Model
   * Generate Confusion Matrix
+
+## Projects
+- [Customer feedback analysis](projects/CustomerFeedbackAnalysis/README.md)
