@@ -1,3 +1,4 @@
+# Natural Language Processing
 - [Text Preprocessing](docs/TextPreprocessing/README.md)
 - [Word Embedding](docs/WordEmbeddings/README.md)
 - Libraries
@@ -6,7 +7,7 @@
 - [RNN](docs/RNN/README.md)
 - [LSTM](docs/LSTM/README.md)
 - [GRU](docs/GRU/README.md)
-- Seq to Swq
+- Seq to Seq
 - Encoder/Decoder
 - Attention
 - Self Attention
