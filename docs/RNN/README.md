@@ -9,7 +9,7 @@
   - [Vector to Seq](#vector-to-seq)
   - [Encoder-Decoder](#encoder-decoder)
 - [RNN Equation and Weight Matrix](#rnn-equation-and-weight-matrix)
-- [How does RNN works](how-does-rnn-works)
+- [How does RNN works](#how-does-rnn-works)
 
 ## Depiction
 <img src="images/RNN-Depiction.png">
@@ -47,4 +47,4 @@
 <img src="images/RNN-Equation-WeightMatrix.png">
 
 ## How does RNN works
-<img src="images/RNN-Equation-WeightMatrix.png">
+<img src="images/How-To-Solve.png">
