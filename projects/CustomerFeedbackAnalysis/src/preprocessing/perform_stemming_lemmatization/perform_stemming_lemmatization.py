@@ -6,6 +6,7 @@ import re
 from nltk.corpus import stopwords
 from src.get_parameters.get_parameters import get_parameters
 nltk.download('wordnet')
+# nltk.download()
 
 
 def clean_text(text):
