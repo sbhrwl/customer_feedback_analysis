@@ -47,4 +47,4 @@
 <img src="images/RNN-Equation-WeightMatrix.png">
 
 ## How does RNN works
-<img src="images/RNN-Equation-WeightMatrix.png">
+<img src="images/How-To-Solve.png.png">
