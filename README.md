@@ -1,13 +1,13 @@
-- Text Preprocessing
-- Word Embedding 
+- [Text Preprocessing](docs/TextPreprocessing/README.md)
+- [Word Embedding](docs/WordEmbeddings/README.md)
 - Libraries
-  - NLTK
-  - SPACY
-- RNN
-- LSTM
-- GPU
+  - [nltk](https://www.nltk.org/)
+  - [spaCy](https://spacy.io/)
+- [RNN](docs/RNN/README.md)
+- [LSTM](docs/LSTM/README.md)
+- [GRU](docs/GRU/README.md)
 - Seq to Swq
-- Eecoder/Decoder
+- Encoder/Decoder
 - Attention
 - Self Attention
 - Transformer family
