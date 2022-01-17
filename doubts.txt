@@ -1,0 +1,1 @@
+The output of TFIDF of a tokenized sentence is clear
