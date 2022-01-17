@@ -26,4 +26,4 @@
   * Generate Confusion Matrix
 
 ## Projects
-- [Customer feedback analysis](projects/CustomerFeedbackAnalysis/README.md)
+- [Customer feedback analysis](CustomerFeedbackAnalysis/README.md)
