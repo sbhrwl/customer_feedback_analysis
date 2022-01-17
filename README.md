@@ -17,4 +17,3 @@
   - ALBERT
   - ROBERT
 - [Projects](projects/README.md)
-  - [Customer feedback analysis](projects/CustomerFeedbackAnalysis/README.md)
