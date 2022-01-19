@@ -1,8 +1,9 @@
 # RNN
-- [Depiction](#depiction)
-- [Feed Forward](#feed-forward)
-- [Previous State Input Neuron](#previous-state-input-neuron)
-- [Previous State Input ANN](#previous-state-input-ann)
+- [Drawbacks of CNN and ANN](#drawbacks-of-cnn-and-ann)
+- [RNN Depiction](#rnn-depiction)
+  - [Passing previous state to a Neuron](#passing-previous-state-to-a-neuron)
+  - [Passing previous state to an ANN](#passing-previous-state-to-an-ann)
+  - [Feed Forward](#feed-forward)
 - [Types of RNN Configuration](#types-of-rnn-configuration)
   - [Seq to Seq](#seq-to-seq)
   - [Seq to Vector](#seq-to-vector)
@@ -11,17 +12,28 @@
 - [RNN Equation and Weight Matrix](#rnn-equation-and-weight-matrix)
 - [How does RNN works](#how-does-rnn-works)
 
-## Depiction
+## Drawbacks of CNN and ANN
+- There is no memory element
+- The present data is not dependent on previous data
+- CNN and ANN are not good for Sequential data
+  - Time series (Stock price), Text data (Language Translation), Speech (Speech Recognition)
+  
+## RNN Depiction
+- Below picture depicts single Neuron or RNN expanded over time
+- **Unrolling across time**- Bring information from `previous state` or previous timestamp (previous word or ngram)
+### Passing previous state to a Neuron
+<img src="images/Previous-State-Input-Neuron.png" width=200>
+
+### Passing previous state to an ANN
+<img src="images/Previous-State-Input-ANN.png" width=200>
+
 <img src="images/RNN-Depiction.png">
 
 ## Feed Forward
 <img src="images/FFNN-Depiction.png">
 
-## Previous State Input Neuron
-<img src="images/Previous-State-Input-Neuron.png">
 
-## Previous State Input ANN
-<img src="images/Previous-State-Input-ANN.png">
+
 
 ## Back Propogation Through Time
 <img src="images/BPTT.png">
