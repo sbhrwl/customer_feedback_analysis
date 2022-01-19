@@ -2,7 +2,7 @@
 # Word Embedding
 - [Overview](#overview)
 - [Text Vectorization](#text-vectorization)
-  - [Text Preprocessing options for before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
+  - [Text Preprocessing options before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
   - [Text Tokenization](#text-tokenization)
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
   - [Keras Embedding layer](#keras-embedding-layer)
@@ -24,7 +24,7 @@
 - We need to process the text data into numerical tensors first. 
 - This process is also called text vectorization.
 
-### Text Preprocessing options for before performing text vectorization
+### Text Preprocessing options before performing text vectorization
 - Split text into **words**, each word is converted into a vector
 - Split text into **characters**, each character is converted into a vector
 - Extract **n-gram of words or characters** each n-gram is converted into a vector
