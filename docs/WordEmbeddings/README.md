@@ -5,9 +5,9 @@
   - [Text Preprocessing options for before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
   - [Text Tokenization](#text-tokenization)
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
+  - [Keras Embedding layer](#keras-embedding-layer)
   - [Bag of Words](#bag-of-eords)
   - [TF-IDF](#tf-idf)
-  - [Keras Embedding layer](#keras-embedding-layer)
   - [Word2Vec](#word2vec)
   - [GloVe](#gloVe)
 
@@ -33,19 +33,6 @@
 - The process of decomposing text into token is called tokenization.
 
 ## Strategies for Text vectorization
-## Bag of Words
-- The Bag-of-words model (BoW model) ignores the grammar and word order of a text, and uses a set of unordered words to express a text or a document.
-- Example
-  - Sentence 1: `John likes to watch movies. Mary likes too.`
-  - Sentence 2: `John also likes to watch football games.`
-  - **Build a dictionary**
-    `{"John": 1, "likes": 2, "to": 3, "watch": 4, "movies": 5, "also": 6, "football": 7, "games": 8, "Mary": 9, "too": 10}`
-  - Represent the abpove 2 sentences using BOW
-    - Sentence 1: `[1, 2, 1, 1, 1, 0, 0, 0, 1, 1]`
-    - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
-
-## TF-IDF
-
 ## Keras Embedding layer
 - Embedding layer
 ```python
@@ -80,7 +67,6 @@ maxlen = 20
 x_train = preprocessing.sequence.pad_sequences(x_train,maxlen=maxlen)
 x_test = preprocessing.sequence.pad_sequences(x_test,maxlen=maxlen)
 
-
 model = Sequential()
 
 model.add(Embedding(10000,8,input_length=maxlen))
@@ -112,6 +98,18 @@ plt.legend()
 
 plt.show()
 ```
+## Bag of Words
+- The Bag-of-words model (BoW model) ignores the grammar and word order of a text, and uses a set of unordered words to express a text or a document.
+- Example
+  - Sentence 1: `John likes to watch movies. Mary likes too.`
+  - Sentence 2: `John also likes to watch football games.`
+  - **Build a dictionary**
+    `{"John": 1, "likes": 2, "to": 3, "watch": 4, "movies": 5, "also": 6, "football": 7, "games": 8, "Mary": 9, "too": 10}`
+  - Represent the abpove 2 sentences using BOW
+    - Sentence 1: `[1, 2, 1, 1, 1, 0, 0, 0, 1, 1]`
+    - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
+
+## TF-IDF
 ## [Word2Vec](https://builtin.com/machine-learning/nlp-word2vec-python)
 ## GloVe
 - GloVe is a type of Word embedding. 
