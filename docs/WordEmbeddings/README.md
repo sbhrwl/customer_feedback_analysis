@@ -3,7 +3,6 @@
 - [Overview](#overview)
 - [Text Vectorization](#text-vectorization)
   - [Text Preprocessing options before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
-  - [Text Tokenization](#text-tokenization)
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
   - [Keras Embedding layer](#keras-embedding-layer)
   - [Bag of Words](#bag-of-eords)
@@ -28,9 +27,6 @@
 - Split text into **words**, each word is converted into a vector
 - Split text into **characters**, each character is converted into a vector
 - Extract **n-gram of words or characters** each n-gram is converted into a vector
-### Text Tokenization
-- The unit into which text is decomposed is called **token**
-- The process of decomposing text into token is called tokenization.
 
 ## Strategies for Text vectorization
 ## Keras Embedding layer
