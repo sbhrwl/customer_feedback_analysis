@@ -3,6 +3,7 @@
 -  [LSTM](#lstm)
   - [Components](#components)
     - [States](#states)
+    - [Output of FC layers](#output-of-fc-layers)
     - [Gates](#gates)
 -  [Keras Implementation](#keras-implementation)
 -  [Bais initialisation](#bais-initialisation)
@@ -36,6 +37,8 @@
 - GRU, Gated Recurrent Unit
 
 ## LSTM
+- Paper: In 1997 by Sepp Hochreiter
+- LSTM architecture helps to remember the important things for **Long** term duration
 <img src="images/lstm.png" width=500>
 
 ### Components
@@ -46,25 +49,48 @@
 - <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
 
 #### Output of FC layers
-- <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : 
-- <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : 
-- <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : 
-- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : 
+- <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : has **Sigmoid** activation 
+- <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : has **tanh** activation
+- <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : has **Sigmoid** activation
+- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : has **Sigmoid** activation
+- All FC layers will take 2 inputs
+  - <img src="https://render.githubusercontent.com/render/math?math=x_{t}"> : **Current Input feature** 
+  - <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
 
 #### Gates
+- Gates would generate the memory elements
 - **Forget** Gate
 - **Input** Gate
+  - **Input** Gate adds to **Forget** Gate to produce **Long** term state
 - **Output** Gate
 
+##### Forget Gate
+- Takes 2 Inputs
+  - <img src="https://render.githubusercontent.com/render/math?math=c_{t-1}"> : **Previous Long** term state
+  - <img src="https://render.githubusercontent.com/render/math?math=f_{t}">
+- Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
+##### Input Gate
+- Takes 2 Inputs
+  - <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : has **tanh** activation
+  - <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : has **Sigmoid** activation
+- The output will **ADD** to Forget gate Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
+##### Output Gate
+- <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state, passed through **tanh**
+- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : has **Sigmoid** activation
+- Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
+
 ## Keras Implementation
-- Option 1
+- Option 1: Optimized for GPU
 ```python
+tf.keras.layers.LSTM(20,)
 ```
-- Option 2
+- Option 2: Offers more customization options but not optimised for GPUs
 ```python
+tf.keras.RNN(tf.keras.layers.LSTMCells(20))
 ```
-- Option 3
+- Option 3: Time Distributed
 ```python
+tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 ```
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
