@@ -67,16 +67,16 @@
 ##### Forget Gate
 - Takes 2 Inputs
   - <img src="https://render.githubusercontent.com/render/math?math=c_{t-1}"> : **Previous Long** term state
-  - <img src="https://render.githubusercontent.com/render/math?math=f_{t}">
+  - <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : with **Sigmoid** activation
 - Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
 ##### Input Gate
 - Takes 2 Inputs
-  - <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : has **tanh** activation
-  - <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : has **Sigmoid** activation
+  - <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : with **tanh** activation
+  - <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : with **Sigmoid** activation
 - The output will **ADD** to Forget gate Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
 ##### Output Gate
 - <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state, passed through **tanh**
-- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : has **Sigmoid** activation
+- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : with **Sigmoid** activation
 - Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
 
 ## Keras Implementation
