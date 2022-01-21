@@ -1,5 +1,9 @@
 # Long Short Term Memory
 -  [Why LSTM?](#why-lstm)
+-  [LSTM](#lstm)
+  - [Components](#components)
+    - [States](#states)
+    - [Gates](#gates)
 -  [Bais initialisation](#bais-initialisation)
 
 ## Why LSTM
@@ -32,6 +36,24 @@
 
 ## LSTM
 <img src="images/lstm.png" width=500>
+
+### Components
+#### States
+- <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
+- <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
+- <img src="https://render.githubusercontent.com/render/math?math=c_{t-1}"> : **Previous Long** term state
+- <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
+
+#### Output of FC layers
+- <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : 
+- <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : 
+- <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : 
+- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : 
+
+#### Gates
+- **Forget** Gate
+- **Input** Gate
+- **Output** Gate
 
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
