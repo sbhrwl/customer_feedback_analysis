@@ -15,7 +15,7 @@
 - **Solution:** 
     - Use **Saturated** activation function **tanh**
     - Perform **Gradient clipping**
-    - Keep small **Learning rate**
+    - Keep small **Learning rate** when using RELU
      <img src="images/rnn-solution.png" width=500> 
 
 ## Bais initialisation
