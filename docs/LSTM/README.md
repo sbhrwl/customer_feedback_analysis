@@ -1,4 +1,4 @@
-# LSTM
+# Long Short Term Memory
 -  [Why LSTM?](#why-lstm)
 -  [Bais initialisation](#bais-initialisation)
 
@@ -27,9 +27,11 @@
 <img src="images/low_memory_retention.png" width=500>
 
 #### Solution
-- Long Short Term Memory and
-- Gated Recurrent Unit
+- LSTM, Long Short Term Memory and
+- GRU, Gated Recurrent Unit
 
+## LSTM
+<img src="images/lstm.png" width=500>
 
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
