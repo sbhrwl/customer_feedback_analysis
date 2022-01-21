@@ -10,7 +10,7 @@
     - Update weight at t=`, if we are in +ve region, we would **Increase** the weight
       - This will result in **FURTHER** increase in **Output**
     - This would eventually result in **EXPLODING GRADIENT**
-      <img src="rnn-explodingGradient.png">
+      <img src="images/rnn-explodingGradient.png">
 
 - **Solution:** 
     - Use **Saturated** activation function **tanh**
