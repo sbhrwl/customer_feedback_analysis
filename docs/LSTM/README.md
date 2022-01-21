@@ -4,6 +4,7 @@
   - [Components](#components)
     - [States](#states)
     - [Gates](#gates)
+-  [Keras Implementation](#keras-implementation)
 -  [Bais initialisation](#bais-initialisation)
 
 ## Why LSTM
@@ -55,6 +56,16 @@
 - **Input** Gate
 - **Output** Gate
 
+## Keras Implementation
+- Option 1
+```python
+```
+- Option 2
+```python
+```
+- Option 3
+```python
+```
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
 - Initialising BIAS with 0 for RNN will result in totally discarding values
