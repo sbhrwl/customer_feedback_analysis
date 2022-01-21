@@ -15,7 +15,8 @@
 - **Solution:** 
     - Use **Saturated** activation function **tanh**
     - Perform **Gradient clipping**
-    - K
+    - Keep small **Learning rate**
+      <img src="images/rnn-solution.png"> 
 
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
