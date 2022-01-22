@@ -12,7 +12,6 @@
 - [Libraries](#libraries)
   - [nltk](https://www.nltk.org/)
   - [TextBlob](https://colab.research.google.com/drive/11PEnYPnmi0eS9wVOXn1lSfiTxFUvUYNi?usp=sharing)
-    - [missing images](https://drive.google.com/drive/folders/1HhkIbieiXGqPWayLOZc4OSswViiv4Hdq)
   - [SpaCy](https://colab.research.google.com/drive/1IRfOFBQ5N6_m0cMgmkzagtfCACrf8sxJ?usp=sharing)
     - [missing images](https://drive.google.com/drive/folders/1HL7EiZlpOloAlRI8Mm2jr-x9r2jqM11H)
   - [Prodi.gy](https://prodi.gy/)
