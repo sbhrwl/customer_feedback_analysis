@@ -9,6 +9,13 @@
   - [TF-IDF](#tf-idf)
   - [Word2Vec](#word2vec)
   - [GloVe](#gloVe)
+- [Libraries](#libraries)
+  - [nltk](https://www.nltk.org/)
+  - [TextBlob](https://colab.research.google.com/drive/11PEnYPnmi0eS9wVOXn1lSfiTxFUvUYNi?usp=sharing)
+  - [SpaCy](https://colab.research.google.com/drive/1IRfOFBQ5N6_m0cMgmkzagtfCACrf8sxJ?usp=sharing)
+  - [Prodi.gy](https://prodi.gy/)
+- [Stanford Learn Natural Language](https://web.stanford.edu/~jurafsky/slp3/)
+  - [Book](https://web.stanford.edu/~jurafsky/slp3/ed3book_jan122022.pdf)
 
 ## Overview
 - Word embedding is a form of word representation that connects the human understanding of language to that of the machine. 
