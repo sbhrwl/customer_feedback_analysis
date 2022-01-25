@@ -1,12 +1,13 @@
 # Long Short Term Memory
--  [Why LSTM?](#why-lstm)
--  [LSTM](#lstm)
+- [Why LSTM?](#why-lstm)
+- [LSTM](#lstm)
+  - [Keras Implementation](#keras-implementation)
   - [Components](#components)
     - [States](#states)
     - [Output of FC layers](#output-of-fc-layers)
     - [Gates](#gates)
--  [Keras Implementation](#keras-implementation)
--  [Bais initialisation](#bais-initialisation)
+  - [LSTM in action](#lstm-in-action)
+- [Bais initialisation](#bais-initialisation)
 
 ## Why LSTM
 ### Problems in training simple RNNs
@@ -41,6 +42,19 @@
 - LSTM architecture helps to remember the important things for **Long** term duration
 <img src="images/lstm.png" width=500>
 
+### Keras Implementation
+- Option 1: Optimized for GPU
+```python
+tf.keras.layers.LSTM(20,)
+```
+- Option 2: Offers more customization options but not optimised for GPUs
+```python
+tf.keras.RNN(tf.keras.layers.LSTMCells(20))
+```
+- Option 3: Time Distributed
+```python
+tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
+```
 ### Components
 #### States
 - <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
@@ -79,19 +93,9 @@
 - <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : with **Sigmoid** activation
 - Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
 
-## Keras Implementation
-- Option 1: Optimized for GPU
-```python
-tf.keras.layers.LSTM(20,)
-```
-- Option 2: Offers more customization options but not optimised for GPUs
-```python
-tf.keras.RNN(tf.keras.layers.LSTMCells(20))
-```
-- Option 3: Time Distributed
-```python
-tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
-```
+### LSTM in action
+#### Consider different states coming in and going out from a LSTM cell
+<img src="images/state_lstm.png" width=500>
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
 - Initialising BIAS with 0 for RNN will result in totally discarding values
