@@ -96,6 +96,7 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 ### LSTM in action
 #### Consider different states coming in and going out from a LSTM cell
 <img src="images/states_lstm.png">
+
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
 - Initialising BIAS with 0 for RNN will result in totally discarding values
