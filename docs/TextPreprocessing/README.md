@@ -1,4 +1,9 @@
 # Text Preprocessing
+## Terms
+- Corpus ~ Book
+  - Corpora is a singular
+- Document ~ Page
+- Token ~ Word
 
 * Original Feedback
   ```
