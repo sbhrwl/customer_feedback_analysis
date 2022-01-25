@@ -56,7 +56,7 @@
 - All FC layers will take 2 inputs
   - <img src="https://render.githubusercontent.com/render/math?math=x_{t}"> : **Current Input feature** 
   - <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
-
+- <img src="https://render.githubusercontent.com/render/math?math=y_{t}"> : **Current Output** 
 #### Gates
 - Gates would generate the memory elements
 - **Forget** Gate
