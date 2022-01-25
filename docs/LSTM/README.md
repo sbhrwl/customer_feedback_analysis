@@ -6,7 +6,7 @@
     - [States](#states)
     - [Output of FC layers](#output-of-fc-layers)
     - [Gates](#gates)
-  - [LSTM in action](#LSTMInAction.md)
+  - [LSTM in action](LSTMInAction.md)
 - [Bais initialisation](#bais-initialisation)
 
 ## Why LSTM
