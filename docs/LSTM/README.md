@@ -6,7 +6,7 @@
     - [States](#states)
     - [Output of FC layers](#output-of-fc-layers)
     - [Gates](#gates)
-  - [LSTM in action](#lstm-in-action)
+  - [LSTM in action](#LSTMInAction.md)
 - [Bais initialisation](#bais-initialisation)
 
 ## Why LSTM
@@ -92,10 +92,6 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 - <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state, passed through **tanh**
 - <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : with **Sigmoid** activation
 - Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
-
-### LSTM in action
-#### Consider different states coming in and going out from a LSTM cell
-<img src="images/states_lstm.png">
 
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
