@@ -5,25 +5,25 @@
 - Document ~ Page
 - Token ~ Word
 
-* Original Feedback
+## Original Feedback
   ```
   "It offers all your essential services in one, and sells energy bundled with broadband, home phone, mobile, home insurance and boiler care."
   ```
-* Punctuations removed
+## Punctuations removed
   ```
   "it offers all your essential services in one and sells energy bundled with broadband home phone mobile home insurance and boiler care"
   ```
-* Tokenized feedback
+## Tokenized feedback
   - The unit into which text is decomposed is called **token**
   - The process of decomposing text into token is called tokenization.
   ```
   ['it', 'offers', 'all', 'your', 'essential', 'services', 'in', 'one', 'and', 'sells', 'energy', 'bundled', 'with', 'broadband', 'home', 'phone', 'mobile', 'home', 'insurance', 'and', 'boiler', 'care']
   ```
-* Stop words removed from feedback
+## Stop words removed from feedback
   ```
   ['offers', 'essential', 'services', 'one', 'sells', 'energy', 'bundled', 'broadband', 'home', 'phone', 'mobile', 'home', 'insurance', 'boiler', 'care']
   ```
-* n GRAM
+## n GRAM
   * Unigram
     ```python
     import jieba
