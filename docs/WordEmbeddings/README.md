@@ -118,6 +118,8 @@ plt.show()
 ## One Hot Encoding
 ## Count vectorizer
 - Use Cosine similarity instead of straight away jumping to Deep learning or Neural Networks
+- Cosine similarity is better when we have high dimensional vectors
+- KNN and eucledian distance do not give good results we have high dimensional vectors
 ## TF-IDF
 ## [Word2Vec](https://builtin.com/machine-learning/nlp-word2vec-python)
 ## GloVe
