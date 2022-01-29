@@ -7,7 +7,6 @@
   - [Machine learning](#machine-learning)
     - [One Hot Encoding](#one-hot-encoding)
     - [Bag of Words](#bag-of-words)
-    - [Count vectorizer](#count-vectorizer)
   - [Deep learning](#deep-learning)
     - [Keras Embedding layer](#keras-embedding-layer)
     - [TF-IDF](#tf-idf)
@@ -55,9 +54,7 @@
     - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
 
 ### Count vectorizer
-- Use Cosine similarity instead of straight away jumping to Deep learning or Neural Networks
-- Cosine similarity is better when we have high dimensional vectors
-- KNN and eucledian distance do not give good results we have high dimensional vectors
+- Count vectorizer is used to implement bag of words
 ## Deep learning
 ### Keras Embedding layer
 - Embedding layer
