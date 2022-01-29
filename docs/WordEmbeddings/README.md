@@ -6,6 +6,8 @@
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
   - [Keras Embedding layer](#keras-embedding-layer)
   - [Bag of Words](#bag-of-eords)
+  - [One Hot Encoding](#one-hot-encoding)
+  - [Count vectorizer](#count-vectorizer)
   - [TF-IDF](#tf-idf)
   - [Word2Vec](#word2vec)
   - [GloVe](#gloVe)
@@ -113,6 +115,9 @@ plt.show()
     - Sentence 1: `[1, 2, 1, 1, 1, 0, 0, 0, 1, 1]`
     - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
 
+## One Hot Encoding
+## Count vectorizer
+- Use Cosine similarity instead of straight away jumping to Deep learning or Neural Networks
 ## TF-IDF
 ## [Word2Vec](https://builtin.com/machine-learning/nlp-word2vec-python)
 ## GloVe
