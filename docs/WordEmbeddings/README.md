@@ -4,7 +4,7 @@
 - [Text Vectorization](#text-vectorization)
   - [Text Preprocessing options before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
-  - [Machine learning](#machine learning)
+  - [Machine learning](#machine-learning)
     - [Bag of Words](#bag-of-eords)
     - [One Hot Encoding](#one-hot-encoding)
     - [Count vectorizer](#count-vectorizer)
