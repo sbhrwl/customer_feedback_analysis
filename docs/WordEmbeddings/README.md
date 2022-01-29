@@ -5,8 +5,8 @@
   - [Text Preprocessing options before performing text vectorization](#text-preprocessing-options-for-before-performing-text-vectorization)
 - [Strategies for Text vectorization](#strategies-for-text-vectorization)
   - [Machine learning](#machine-learning)
-    - [Bag of Words](#bag-of-words)
     - [One Hot Encoding](#one-hot-encoding)
+    - [Bag of Words](#bag-of-words)
     - [Count vectorizer](#count-vectorizer)
   - [Deep learning](#deep-learning)
     - [Keras Embedding layer](#keras-embedding-layer)
@@ -42,6 +42,7 @@
 
 ## Strategies for Text vectorization
 ## Machine learning
+### One Hot Encoding
 ### Bag of Words
 - The Bag-of-words model (BoW model) ignores the grammar and word order of a text, and uses a set of unordered words to express a text or a document.
 - Example
@@ -53,7 +54,6 @@
     - Sentence 1: `[1, 2, 1, 1, 1, 0, 0, 0, 1, 1]`
     - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
 
-### One Hot Encoding
 ### Count vectorizer
 - Use Cosine similarity instead of straight away jumping to Deep learning or Neural Networks
 - Cosine similarity is better when we have high dimensional vectors
