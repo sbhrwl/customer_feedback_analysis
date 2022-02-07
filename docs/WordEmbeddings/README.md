@@ -7,11 +7,11 @@
   - [Machine learning](#machine-learning)
     - [One Hot Encoding](#one-hot-encoding)
     - [Bag of Words](#bag-of-words)
-  - [Deep learning](#deep-learning)
-    - [Keras Embedding layer](#keras-embedding-layer)
     - [TF-IDF](#tf-idf)
+  - [Deep learning](#deep-learning)
     - [Word2Vec](#word2vec)
     - [GloVe](#gloVe)
+    - [Keras Embedding layer](#keras-embedding-layer)
 - [Libraries](#libraries)
   - [nltk](https://www.nltk.org/)
   - [TextBlob](https://colab.research.google.com/drive/11PEnYPnmi0eS9wVOXn1lSfiTxFUvUYNi?usp=sharing)
@@ -55,7 +55,14 @@
 
 ### Count vectorizer
 - Count vectorizer is used to implement bag of words
+### TF-IDF
 ## Deep learning
+### [Word2Vec](https://builtin.com/machine-learning/nlp-word2vec-python)
+### GloVe
+- GloVe is a type of Word embedding. 
+- The format of the GloVe word vector and word2vec is a little different from the Stanford open source code training. 
+- The first line of the model trained by word2vec is: thesaurus size and dimensions, while gloVe does not
+
 ### Keras Embedding layer
 - Embedding layer
 ```python
@@ -121,12 +128,6 @@ plt.legend()
 
 plt.show()
 ```
-### TF-IDF
-### [Word2Vec](https://builtin.com/machine-learning/nlp-word2vec-python)
-### GloVe
-- GloVe is a type of Word embedding. 
-- The format of the GloVe word vector and word2vec is a little different from the Stanford open source code training. 
-- The first line of the model trained by word2vec is: thesaurus size and dimensions, while gloVe does not
 
 ## Links
 - [Flashtext better than regular expressions]https://arxiv.org/pdf/1711.00046.pdf
