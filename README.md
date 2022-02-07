@@ -4,6 +4,7 @@
 - [RNN](docs/RNN/README.md)
 - [LSTM](docs/LSTM/README.md)
 - [GRU](docs/GRU/README.md)
+- [Bidirectional RNN](docs/BidirectionalRNN/README.md)
 - Seq to Seq
 - Encoder/Decoder
 - Attention
