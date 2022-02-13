@@ -126,6 +126,7 @@ plt.show()
 - [blog](https://israelg99.github.io/2017-03-23-Word2Vec-Explained/)
 - [blog](https://jalammar.github.io/illustrated-word2vec/)
 - [blog](https://builtin.com/machine-learning/nlp-word2vec-python)
+- [blog](https://radimrehurek.com/gensim/models/word2vec.html)
 ### GloVe
 - GloVe is a type of Word embedding. 
 - The format of the GloVe word vector and word2vec is a little different from the Stanford open source code training. 
