@@ -1,6 +1,7 @@
 # Long Short Term Memory
 - [Why LSTM?](#why-lstm)
 - [LSTM](#lstm)
+  - [Blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
   - [Keras Implementation](#keras-implementation)
   - [Components](#components)
     - [States](#states)
