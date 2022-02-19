@@ -5,8 +5,7 @@
 - [LSTM](docs/LSTM/README.md)
 - [GRU](docs/GRU/README.md)
 - [Bidirectional RNN](docs/BidirectionalRNN/README.md)
-- Seq to Seq
-- Encoder/Decoder
+- [Encoder Decoder](docs/EncoderDecoder/README.md)
 - Attention
 - Self Attention
 - Transformer family
