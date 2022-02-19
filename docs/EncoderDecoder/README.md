@@ -5,3 +5,6 @@
 #### Inferencing
 <img src="inferencing.png">
 
+#### Examples
+- [lstm-seq2seq](https://github.com/bond005/seq2seq)
+- [Basic Encoder Decoder](https://colab.research.google.com/github/kmkarakaya/ML_tutorials/blob/master/seq2seq_Part_C_Basic_Encoder_Decoder.ipynb)
