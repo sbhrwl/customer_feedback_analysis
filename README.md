@@ -7,11 +7,7 @@
 - [Bidirectional RNN](docs/BidirectionalRNN/README.md)
 - [Encoder Decoder](docs/EncoderDecoder/README.md)
 - [Attention](docs/Attention/README.md)
-- Transformer family
-  - BERT
-  - GPT
-  - ALBERT
-  - ROBERT
-- [Keras example](https://keras.io/examples/)
+- [Transformer family](docs/Transformers/README.md)
+- [Keras DL examples](https://keras.io/examples/)
 - [Projects](projects/README.md)
 - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
