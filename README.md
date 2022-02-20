@@ -6,7 +6,7 @@
 - [GRU](docs/GRU/README.md)
 - [Bidirectional RNN](docs/BidirectionalRNN/README.md)
 - [Encoder Decoder](docs/EncoderDecoder/README.md)
-- [Attention](Attention/README.md)
+- [Attention](docs/Attention/README.md)
 - Transformer family
   - BERT
   - GPT
