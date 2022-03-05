@@ -30,3 +30,21 @@ encoded = tz.encode_plus(
 input_ids = encoded['input_ids']
 attn_mask = encoded['attention_mask']
 ```
+### Preparing a sentence for input to the BERT model
+- For simplicity, we assume the maximum length is 10 in the example below (while in the original model it is set to be 512).
+```
+# Original Sentence
+Let's learn deep learning!
+
+# Tokenized Sentence
+['Let', "'", 's', 'learn', 'deep', 'learning', '!']
+
+# Adding [CLS] and [SEP] Tokens
+['[CLS]', 'Let', "'", 's', 'learn', 'deep', 'learning', '!', '[SEP]']
+
+# Padding
+['[CLS]', 'Let', "'", 's', 'learn', 'deep', 'learning', '!', '[SEP]', '[PAD]']
+
+# Converting to IDs
+[101, 2421, 112, 188, 3858, 1996, 3776, 106, 102, 0]
+```
