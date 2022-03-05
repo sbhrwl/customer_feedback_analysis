@@ -1,6 +1,6 @@
 # Transformers
 ## Transformer family
-- BERT
+- [BERT](bert/README.md)
 - GPT
 - ALBERT
 - ROBERT
