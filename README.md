@@ -12,3 +12,4 @@
 - [Projects](projects/README.md)
 - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
 - [Model on Huggingface](https://huggingface.co/models)
+  - [Bert example](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
