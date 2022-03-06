@@ -48,3 +48,10 @@ Let's learn deep learning!
 # Converting to IDs
 [101, 2421, 112, 188, 3858, 1996, 3776, 106, 102, 0]
 ```
+## BERT: From Decoders to Encoders
+- Masked Language Model
+- Two-sentence Tasks
+- Task specific-Models
+- BERT for feature extraction
+## [BERT Colab](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb)
+- Trains on TPU
