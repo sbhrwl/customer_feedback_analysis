@@ -12,8 +12,10 @@
   - [Basic NLP Projects](projects/README.md)
   - [Keras DL examples](https://keras.io/examples/)
   - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
+  - [Simple transformers](https://simpletransformers.ai/)
   - [Tensorflow hub](https://tfhub.dev/)
   - [Models on Huggingface](https://huggingface.co/models)
     - [Bert example](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
   - [Allen NLP](https://demo.allennlp.org/reading-comprehension/bidaf-elmo)
   - [Google Cloud Natural Language](https://cloud.google.com/natural-language)
+
