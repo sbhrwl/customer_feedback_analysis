@@ -13,6 +13,7 @@
   - [Keras DL examples](https://keras.io/examples/)
   - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
   - [Simple transformers](https://simpletransformers.ai/)
+    - [Github](https://github.com/ThilinaRajapakse)
   - [Tensorflow hub](https://tfhub.dev/)
   - [Models on Huggingface](https://huggingface.co/models)
     - [Bert example](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
