@@ -19,4 +19,6 @@
     - [Bert example](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
   - [Allen NLP](https://demo.allennlp.org/reading-comprehension/bidaf-elmo)
   - [Google Cloud Natural Language](https://cloud.google.com/natural-language)
+  - [Pegasus](https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html)
+  - [Visual QA](https://visualqa.org/)
 
