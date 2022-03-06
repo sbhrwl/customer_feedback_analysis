@@ -22,4 +22,4 @@
   - [Pegasus](https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html)
   - [Visual QA](https://visualqa.org/)
   - [vit-keras](https://github.com/faustomorales/vit-keras)
-
+- [Telegram group](https://t.me/+2WNcqoom2FlhNjk1)
