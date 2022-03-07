@@ -55,3 +55,9 @@ Let's learn deep learning!
 - BERT for feature extraction
 ## [BERT Colab](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb)
 - Trains on TPU
+
+## Topic Modeling 
+Topic Modeling is unidirectional , left to right (french to english) eg predicting next word `rahul is ?`
+## Language model
+- Language model can be uni as well as bi directional
+- Language model uses **masking strategies** - removes words/tokens from original corpus.
