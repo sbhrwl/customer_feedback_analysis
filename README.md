@@ -29,7 +29,7 @@
   - [Parts Of Speech Tagging-BERT](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
   - [Named Entity Recognition-BERT](https://drive.google.com/drive/folders/143MBWISPXyNpRQD5xjbYaRcsxxRrOLH0?usp=sharing)
     - `conda install pytorch==1.4.0 torchvision==0.5.0 -c pytorch`
-  - [pell Corrector](https://drive.google.com/drive/folders/1tVhy7sFyJ8qA3lsdkw7II9-3FBWKSQGa?usp=sharing)
+  - [Spelling Corrector](https://drive.google.com/drive/folders/1tVhy7sFyJ8qA3lsdkw7II9-3FBWKSQGa?usp=sharing)
   - [Text to Speech](https://drive.google.com/drive/folders/1azEKh8H19izAGkZrGmuebbgRnYBU1p2B?usp=sharing)
   - [Speech to Text](https://drive.google.com/drive/folders/1ORzhZ8BIDRL6y8xLijLit1xKsAizlJJ2?usp=sharing)
   - [Sentiment Analysis](https://drive.google.com/drive/folders/1UdISS1mzXwPg4bV5H_-Y4k3ITO9cmLUu?usp=sharing)
