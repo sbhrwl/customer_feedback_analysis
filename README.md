@@ -26,8 +26,8 @@
   - [Spacy NER pipeline](https://convokit.cornell.edu/documentation/transformers.html)
 - Projects
   - [Basic NLP Projects](projects/README.md)
-  - [BERT Parts Of Speech Tagging](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
-  - [NER BERT](https://drive.google.com/drive/folders/143MBWISPXyNpRQD5xjbYaRcsxxRrOLH0?usp=sharing)
+  - [Parts Of Speech Tagging-BERT](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
+  - [Named Entity Recognition-BERT](https://drive.google.com/drive/folders/143MBWISPXyNpRQD5xjbYaRcsxxRrOLH0?usp=sharing)
   - [Spell Corrector](https://drive.google.com/drive/folders/1tVhy7sFyJ8qA3lsdkw7II9-3FBWKSQGa?usp=sharing)
   - [T2S](https://drive.google.com/drive/folders/1azEKh8H19izAGkZrGmuebbgRnYBU1p2B?usp=sharing)
   - [S2T](https://drive.google.com/drive/folders/1ORzhZ8BIDRL6y8xLijLit1xKsAizlJJ2?usp=sharing)
