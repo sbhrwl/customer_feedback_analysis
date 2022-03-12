@@ -1,4 +1,4 @@
-# Name Entity Recognition
+# Named Entity Recognition
 - Test parsing
 - Text processing
 - Data annotation
