@@ -18,3 +18,6 @@
 - GPU
 - Annotation tool (spacy, prodigy)
 - Augmentation library
+
+## Example
+<img src="NERexample.png">
