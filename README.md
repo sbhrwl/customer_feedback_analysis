@@ -8,6 +8,7 @@
 - [Encoder Decoder](docs/EncoderDecoder/README.md)
 - [Attention](docs/Attention/README.md)
 - [Transformers](docs/Transformers/README.md)
+- [Named Entity Recognition](docs/ner/README.md)
 - Examples
   - [Basic NLP Projects](projects/README.md)
   - [Keras DL examples](https://keras.io/examples/)
@@ -22,4 +23,5 @@
   - [Pegasus](https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html)
   - [Visual QA](https://visualqa.org/)
   - [vit-keras](https://github.com/faustomorales/vit-keras)
-- [Telegram group](https://t.me/+2WNcqoom2FlhNjk1)
+  - [convokit](https://convokit.cornell.edu/documentation/transformers.html)
+  - [Spacy NER pipeline](https://convokit.cornell.edu/documentation/transformers.html)
