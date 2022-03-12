@@ -33,3 +33,6 @@
   - [Text to Speech](https://drive.google.com/drive/folders/1azEKh8H19izAGkZrGmuebbgRnYBU1p2B?usp=sharing)
   - [Speech to Text](https://drive.google.com/drive/folders/1ORzhZ8BIDRL6y8xLijLit1xKsAizlJJ2?usp=sharing)
   - [Sentiment Analysis](https://drive.google.com/drive/folders/1UdISS1mzXwPg4bV5H_-Y4k3ITO9cmLUu?usp=sharing)
+  - [Text Summarization-BART](https://drive.google.com/drive/folders/18xokHuKuQwLSqKCuqraMvtsS3EUXvYl_?usp=sharing)
+  - [Text Classification](https://drive.google.com/drive/folders/1mgmrtdWvOXja9WnHBTdpr49JzphMYWHV?usp=sharing)
+  - [Question Answers](https://drive.google.com/drive/folders/1tWnNAz7yghxCj7qpLEY_xlkNIMFnCBEU?usp=sharing)
