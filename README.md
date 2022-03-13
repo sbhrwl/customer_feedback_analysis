@@ -36,3 +36,6 @@
   - [Text Summarization-BART](https://drive.google.com/drive/folders/18xokHuKuQwLSqKCuqraMvtsS3EUXvYl_?usp=sharing)
   - [Text Classification](https://drive.google.com/drive/folders/1mgmrtdWvOXja9WnHBTdpr49JzphMYWHV?usp=sharing)
   - [Question Answers](https://drive.google.com/drive/folders/1tWnNAz7yghxCj7qpLEY_xlkNIMFnCBEU?usp=sharing)
+  - [Paraphrasing](https://colab.research.google.com/drive/1llpGRYJ6A9jPAGA6ENM5ELcEq7IlUkEG?usp=sharing)
+    - [Quillbot](https://quillbot.com/?utm_source=Google&utm_medium=Search&utm_campaign=Paraphrase_Developing&gclid=CjwKCAiAprGRBhBgEiwANJEY7DBirTD3wi4IBvdm4xMpcq3oswCmiWhlQbyaK5a5vhQ5zPRp-NPNuRoCUJAQAvD_BwE)
+    - [Paraphrasing dataset: parabank](https://nlp.jhu.edu/parabank/)
