@@ -9,6 +9,8 @@
 - [Attention](docs/Attention/README.md)
 - [Transformers](docs/Transformers/README.md)
 - [Named Entity Recognition](docs/ner/README.md)
+- [Comparing Google and Huggingface](docs/Google-Huggingface/README.md)
+- [Bidirectional taggers](docs/BidirectionalTaggers/README.md)
 - Links
   - [Keras DL examples](https://keras.io/examples/)
   - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
