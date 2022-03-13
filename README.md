@@ -24,6 +24,7 @@
   - [vit-keras](https://github.com/faustomorales/vit-keras)
   - [convokit](https://convokit.cornell.edu/documentation/transformers.html)
   - [Spacy NER pipeline](https://convokit.cornell.edu/documentation/transformers.html)
+  - [Seq2Seq: List of Models](https://github.com/ThilinaRajapakse/simpletransformers/blob/master/simpletransformers/seq2seq/seq2seq_model.py)
 - Projects
   - [Basic NLP Projects](projects/README.md)
   - [Parts Of Speech Tagging-BERT](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
