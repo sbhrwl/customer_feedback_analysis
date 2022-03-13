@@ -39,8 +39,8 @@
   - [Question Answers](https://drive.google.com/drive/folders/1tWnNAz7yghxCj7qpLEY_xlkNIMFnCBEU?usp=sharing)
   - [Paraphrasing](https://colab.research.google.com/drive/1llpGRYJ6A9jPAGA6ENM5ELcEq7IlUkEG?usp=sharing)
     - [Quillbot](https://quillbot.com/?utm_source=Google&utm_medium=Search&utm_campaign=Paraphrase_Developing&gclid=CjwKCAiAprGRBhBgEiwANJEY7DBirTD3wi4IBvdm4xMpcq3oswCmiWhlQbyaK5a5vhQ5zPRp-NPNuRoCUJAQAvD_BwE)
-    - Paraphrasing dataset
+    - Paraphrasing datasets
       - [Parabank](https://nlp.jhu.edu/parabank/)
       - [Google paws](https://github.com/google-research-datasets/paws)
-      - [MSRC](https://github.com/microsoft/MSR-NLP-Projects)
       - [QQP](https://paperswithcode.com/dataset/quora-question-pairs)
+      - [MSRC](https://github.com/microsoft/MSR-NLP-Projects)
