@@ -12,6 +12,7 @@
 - [Comparing Google and Huggingface](docs/Google-Huggingface/README.md)
 - [Bidirectional taggers](docs/BidirectionalTaggers/README.md)
 - Links
+  - [Andrew Ng](https://www.coursera.org/learn/nlp-sequence-models?specialization=deep-learning#syllabus)
   - [Keras DL examples](https://keras.io/examples/)
   - [Datasets](https://github.com/juand-r/entity-recognition-datasets)
   - [Simple transformers](https://simpletransformers.ai/)
