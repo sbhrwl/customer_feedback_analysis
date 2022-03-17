@@ -70,7 +70,7 @@
 <img src="images/7.Multi_headed_attention.png" width=500>
 
 ## Page1
-<img src="images/Page1.png" width=500>
+<img src="images/Page1.jpg" width=500>
 
 ## Page2
-<img src="images/Page2.png" width=500>
+<img src="images/Page2.jpg" width=500>
