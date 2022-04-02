@@ -53,3 +53,4 @@
   - [Text generation](https://drive.google.com/file/d/1gGChcf-XBDCRwiUx7ZrUXZbfK9TaP_cC/view)
   - [Question Answering](https://drive.google.com/file/d/1GFK5xi6yC28VOhlEGTaue1dicIODXbz0/view)
   - [Detecting fake text](https://drive.google.com/file/d/12ffxEbgJXmQF3sC9NB6uNXGvIlYw1Iyc/view)
+  - [Megatron2](https://drive.google.com/drive/u/0/folders/1EvtYox2aQZx0vboZDrGJXtLxgxEuJoj1)
