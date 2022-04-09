@@ -54,4 +54,5 @@
   - [Question Answering](https://drive.google.com/file/d/1GFK5xi6yC28VOhlEGTaue1dicIODXbz0/view)
     - [SQuAD-explorer](https://rajpurkar.github.io/SQuAD-explorer/)
   - [Detecting fake text](https://drive.google.com/file/d/12ffxEbgJXmQF3sC9NB6uNXGvIlYw1Iyc/view)
+  - [Bart Text summarization](https://github.com/renatoviolin/Bart_T5-summarization)
   - [Megatron2](https://drive.google.com/drive/u/0/folders/1EvtYox2aQZx0vboZDrGJXtLxgxEuJoj1)
