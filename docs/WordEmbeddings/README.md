@@ -132,6 +132,6 @@ plt.show()
 - The format of the GloVe word vector and word2vec is a little different from the Stanford open source code training. 
 - The first line of the model trained by word2vec is: thesaurus size and dimensions, while gloVe does not
 ## Links
-- [Flashtext better than regular expressions]https://arxiv.org/pdf/1711.00046.pdf
+- [Flashtext better than regular expressions](https://arxiv.org/pdf/1711.00046.pdf)
 - [Parts of speech](https://sites.google.com/site/partofspeechhelp/)
 - [Xceptor: No-code data automation platform](https://www.xceptor.com/)
