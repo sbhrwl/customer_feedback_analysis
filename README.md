@@ -30,16 +30,16 @@
   - [Seq2Seq: List of Models](https://github.com/ThilinaRajapakse/simpletransformers/blob/master/simpletransformers/seq2seq/seq2seq_model.py)
 - Projects
   - [Basic NLP Projects](projects/README.md)
-  - [Parts Of Speech Tagging-BERT](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
-  - [Named Entity Recognition-BERT](https://drive.google.com/drive/folders/143MBWISPXyNpRQD5xjbYaRcsxxRrOLH0?usp=sharing)
-    - `conda install pytorch==1.4.0 torchvision==0.5.0 -c pytorch`
-  - [Spelling Corrector](https://drive.google.com/drive/folders/1tVhy7sFyJ8qA3lsdkw7II9-3FBWKSQGa?usp=sharing)
-  - [Text to Speech](https://drive.google.com/drive/folders/1azEKh8H19izAGkZrGmuebbgRnYBU1p2B?usp=sharing)
-  - [Speech to Text](https://drive.google.com/drive/folders/1ORzhZ8BIDRL6y8xLijLit1xKsAizlJJ2?usp=sharing)
-  - [Sentiment Analysis](https://drive.google.com/drive/folders/1UdISS1mzXwPg4bV5H_-Y4k3ITO9cmLUu?usp=sharing)
-  - [Text Summarization-BART](https://drive.google.com/drive/folders/18xokHuKuQwLSqKCuqraMvtsS3EUXvYl_?usp=sharing)
-  - [Text Classification](https://drive.google.com/drive/folders/1mgmrtdWvOXja9WnHBTdpr49JzphMYWHV?usp=sharing)
-  - [Question Answers](https://drive.google.com/drive/folders/1tWnNAz7yghxCj7qpLEY_xlkNIMFnCBEU?usp=sharing)
+    - [Parts Of Speech Tagging-BERT](https://drive.google.com/drive/folders/15KdBxLNm-Ym9SqPiFhciS6mN-0gMQBN5?usp=sharing)
+    - [Named Entity Recognition-BERT](https://drive.google.com/drive/folders/143MBWISPXyNpRQD5xjbYaRcsxxRrOLH0?usp=sharing)
+      - `conda install pytorch==1.4.0 torchvision==0.5.0 -c pytorch`
+    - [Spelling Corrector](https://drive.google.com/drive/folders/1tVhy7sFyJ8qA3lsdkw7II9-3FBWKSQGa?usp=sharing)
+    - [Text to Speech](https://drive.google.com/drive/folders/1azEKh8H19izAGkZrGmuebbgRnYBU1p2B?usp=sharing)
+    - [Speech to Text](https://drive.google.com/drive/folders/1ORzhZ8BIDRL6y8xLijLit1xKsAizlJJ2?usp=sharing)
+    - [Sentiment Analysis](https://drive.google.com/drive/folders/1UdISS1mzXwPg4bV5H_-Y4k3ITO9cmLUu?usp=sharing)
+    - [Text Summarization-BART](https://drive.google.com/drive/folders/18xokHuKuQwLSqKCuqraMvtsS3EUXvYl_?usp=sharing)
+    - [Text Classification](https://drive.google.com/drive/folders/1mgmrtdWvOXja9WnHBTdpr49JzphMYWHV?usp=sharing)
+    - [Question Answers](https://drive.google.com/drive/folders/1tWnNAz7yghxCj7qpLEY_xlkNIMFnCBEU?usp=sharing)
   - [Paraphrasing](https://colab.research.google.com/drive/1llpGRYJ6A9jPAGA6ENM5ELcEq7IlUkEG?usp=sharing)
     - [Quillbot](https://quillbot.com/?utm_source=Google&utm_medium=Search&utm_campaign=Paraphrase_Developing&gclid=CjwKCAiAprGRBhBgEiwANJEY7DBirTD3wi4IBvdm4xMpcq3oswCmiWhlQbyaK5a5vhQ5zPRp-NPNuRoCUJAQAvD_BwE)
     - Paraphrasing datasets
