@@ -49,7 +49,7 @@
   - Sentence 2: `John also likes to watch football games.`
   - **Build a dictionary**
     `{"John": 1, "likes": 2, "to": 3, "watch": 4, "movies": 5, "also": 6, "football": 7, "games": 8, "Mary": 9, "too": 10}`
-  - Represent the abpove 2 sentences using BOW
+  - Represent the above 2 sentences using BOW
     - Sentence 1: `[1, 2, 1, 1, 1, 0, 0, 0, 1, 1]`
     - Sentence 2: `[1, 1, 1, 1, 0, 1, 1, 1, 0, 0]`
 
