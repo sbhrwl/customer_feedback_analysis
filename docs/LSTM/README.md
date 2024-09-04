@@ -16,7 +16,7 @@
 - When we use **Unsaturated** activation function **RELU**
   - Update weight at t=0, if we are in +ve region, we would **Increase** the weight
     - This will result in increase in **Output**
-  - Update weight at t=`, if we are in +ve region, we would **Increase** the weight
+  - Update weight at t=1, if we are in +ve region, we would **Increase** the weight
     - This will result in **FURTHER** increase in **Output**
   - This would eventually result in **EXPLODING GRADIENT**
     <img src="images/rnn-explodingGradient.png">
