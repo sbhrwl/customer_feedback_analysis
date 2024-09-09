@@ -59,20 +59,19 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 ### Components
 #### States
 - $c_{t}$ : **Long** term state
-- <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
 - $h_{t}$ : **Short** term state
 - $c_{t-1}$ : **Previous Long** term state
 - $h_{t-1}$ : **Previous Short** term state
 
 #### Output of FC layers
-- <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : has **Sigmoid** activation 
-- <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : has **tanh** activation
-- <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : has **Sigmoid** activation
-- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : has **Sigmoid** activation
+- $f_{t}$ : has **Sigmoid** activation 
+- $g_{t}$ : has **tanh** activation
+- $i_{t}$ : has **Sigmoid** activation
+- $o_{t}$ : has **Sigmoid** activation
 - All FC layers will take 2 inputs
-  - <img src="https://render.githubusercontent.com/render/math?math=x_{t}"> : **Current Input feature** 
-  - <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
-- <img src="https://render.githubusercontent.com/render/math?math=y_{t}"> : **Current Output** 
+  - $x_{t}$ : **Current Input feature** 
+  - $h_{t-1}$ : **Previous Short** term state
+- $y_{t}$ : **Current Output** 
 #### Gates
 - Gates would generate the memory elements
 - **Forget** Gate
@@ -82,18 +81,18 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 
 ##### Forget Gate
 - Takes 2 Inputs
-  - <img src="https://render.githubusercontent.com/render/math?math=c_{t-1}"> : **Previous Long** term state
-  - <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : with **Sigmoid** activation
-- Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
+  - $c_{t-1} : **Previous Long** term state
+  - $f_{t}$ : with **Sigmoid** activation
+- Produces an Output that results in $c_{t}$ : **Long** term state
 ##### Input Gate
 - Takes 2 Inputs
-  - <img src="https://render.githubusercontent.com/render/math?math=g_{t}"> : with **tanh** activation
-  - <img src="https://render.githubusercontent.com/render/math?math=i_{t}"> : with **Sigmoid** activation
-- The output will **ADD** to Forget gate Output that results in <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
+  - $g_{t}$ : with **tanh** activation
+  - $i_{t}$ : with **Sigmoid** activation
+- The output will **ADD** to Forget gate Output that results in $c_{t}$ : **Long** term state
 ##### Output Gate
-- <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state, passed through **tanh**
-- <img src="https://render.githubusercontent.com/render/math?math=o_{t}"> : with **Sigmoid** activation
-- Produces an Output that results in <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
+- $c_{t}$ : **Long** term state, passed through **tanh**
+- $o_{t}$ : with **Sigmoid** activation
+- Produces an Output that results in $h_{t}$ : **Short** term state
 
 ## Bais initialisation
 - Weights are initialised as 1 (instead of 0 in ANNs and other ML models)
