@@ -58,10 +58,11 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 ```
 ### Components
 #### States
+- $c_{t}$ : **Long** term state
 - <img src="https://render.githubusercontent.com/render/math?math=c_{t}"> : **Long** term state
-- <img src="https://render.githubusercontent.com/render/math?math=h_{t}"> : **Short** term state
-- <img src="https://render.githubusercontent.com/render/math?math=c_{t-1}"> : **Previous Long** term state
-- <img src="https://render.githubusercontent.com/render/math?math=h_{t-1}"> : **Previous Short** term state
+- $h_{t}$ : **Short** term state
+- $c_{t-1}$ : **Previous Long** term state
+- $h_{t-1}$ : **Previous Short** term state
 
 #### Output of FC layers
 - <img src="https://render.githubusercontent.com/render/math?math=f_{t}"> : has **Sigmoid** activation 
