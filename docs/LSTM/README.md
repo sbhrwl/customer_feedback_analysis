@@ -81,7 +81,7 @@ tf.keras.TimeDistributed(tf.keras.layers.Dense(20))
 
 ##### Forget Gate
 - Takes 2 Inputs
-  - $c_{t-1} : **Previous Long** term state
+  - $c_{t-1}$ : **Previous Long** term state
   - $f_{t}$ : with **Sigmoid** activation
 - Produces an Output that results in $c_{t}$ : **Long** term state
 ##### Input Gate
