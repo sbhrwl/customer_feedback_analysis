@@ -17,7 +17,8 @@
 - Encoder-decoder architectures can handle variable-length input and output sequences, which is crucial for tasks like machine translation, where the source and target sentences may have different lengths.
 
 ### Improving Context Representation
-- While bidirectional RNNs can capture information from both directions, they may still struggle with very long sequences. - An encoder-decoder architecture separates the task into two phases:
+- While bidirectional RNNs can capture information from both directions, they may still struggle with very long sequences. 
+- An encoder-decoder architecture separates the task into two phases:
   - **Encoder**: Reads the entire input sequence and compresses it into a fixed-length context vector.
   - **Decoder**: Takes the context vector and generates the output sequence step-by-step. 
 - This separation helps in managing long-term dependencies more effectively.
@@ -33,8 +34,11 @@
 
 ### **Example: Machine Translation**
 - Consider translating a sentence from English to French:
-- **Bidirectional RNN**: Processes the English sentence in both directions but may have limitations with very long sentences.
-- **Encoder-Decoder**: The encoder processes the entire English sentence and creates a context vector. The decoder then generates the French sentence one word at a time, attending to different parts of the context vector as needed.
+- **Bidirectional RNN**: 
+  - Processes the English sentence in both directions but may have limitations with very long sentences.
+- **Encoder-Decoder**: 
+  - The encoder processes the entire English sentence and creates a context vector. 
+  - The decoder then generates the French sentence one word at a time, attending to different parts of the context vector as needed.
 
 ### **Illustration of Encoder-Decoder Architecture**
 1. **Encoder**: 
