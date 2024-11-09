@@ -8,6 +8,7 @@
 - [Encoder Decoder](docs/EncoderDecoder/README.md)
 - [Attention](docs/Attention/README.md)
 - [Transformers](docs/Transformers/README.md)
+  - [Evolution](docs/Transformers/evolution.md)
 - [Named Entity Recognition](docs/ner/README.md)
 - [Comparing Google and Huggingface](docs/Google-Huggingface/README.md)
 - [Bidirectional taggers](docs/BidirectionalTaggers/README.md)
