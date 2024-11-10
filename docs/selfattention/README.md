@@ -32,7 +32,7 @@ Attention and self-attention are both mechanisms in machine learning, particular
 - Let’s imagine we’re processing this sentence in two different contexts:
 ### Attention
 - Attention (Cross-Attention) in a sequence-to-sequence model, like in a translation task where we translate from English to French.
-   - In the decoder, when generating each word in the output (French) sentence, the model uses attention to focus on specific parts of the input (English) sentence that are most relevant to the current output word.
+- In the decoder, when generating each word in the output (French) sentence, the model uses attention to focus on specific parts of the input (English) sentence that are most relevant to the current output word.
 - Example Translation:
 > "Le chat s'est assis sur le tapis."
 - For generating "Le" in the French sentence, the decoder will pay the most attention to "The" in the English sentence.
