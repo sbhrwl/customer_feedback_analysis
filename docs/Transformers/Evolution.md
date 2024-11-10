@@ -14,15 +14,15 @@
 ### Key Evolution Points:
 1. **ANN to RNN**:
    - **Challenge**: ANNs couldn't handle sequences effectively.
-   - **Solution**: RNNs introduced memory, allowing sequential data processing.
+   - **Solution**: RNNs introduced `memory`, allowing sequential data processing.
 
 2. **RNN to LSTM**:
    - **Challenge**: RNNs struggled with long-term dependencies due to the vanishing gradient problem.
-   - **Solution**: LSTMs introduced memory cells and gates, effectively managing long-term dependencies.
+   - **Solution**: LSTMs introduced `memory cells and gates`, effectively `managing long-term dependencies`.
 
 3. **LSTM to Bidirectional RNN**:
    - **Challenge**: LSTMs processed data in a single direction, missing future context.
-   - **Solution**: Bidirectional RNNs processed data in both directions, capturing more context.
+   - **Solution**: Bidirectional RNNs processed data in `both directions, capturing more context`.
 
 4. **Bidirectional RNN to Encoder-Decoder**:
    - **Challenge**: Bidirectional RNNs had limitations with variable-length sequences and complex dependencies.
@@ -34,7 +34,7 @@
 
 6. **Attention Mechanisms to Transformers**:
    - **Challenge**: Attention mechanisms, while powerful, introduce computational complexity and risk of overfitting.
-   - **Solution**: Transformer models use self-attention mechanisms, enabling scaling and parallel processing, leading to breakthroughs in performance and efficiency.
+   - **Solution**: Transformer models use `self-attention` mechanisms, enabling scaling and parallel processing, leading to breakthroughs in performance and efficiency.
 
 ### Visualization:
 ```
