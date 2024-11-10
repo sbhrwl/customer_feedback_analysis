@@ -7,7 +7,7 @@
 - [Bidirectional RNN](docs/BidirectionalRNN/README.md)
 - [Encoder Decoder](docs/EncoderDecoder/README.md)
 - [Transformers](docs/Transformers/README.md)
-  - [Attention](docs/Attention/README.md)
+  - [Self attention](docs/Attention/README.md)
 - [Large Language Models](docs/largelanguagemodels/README.md)
 - [Evolution](docs/evolution/README.md)
 - [Named Entity Recognition](docs/ner/README.md)
