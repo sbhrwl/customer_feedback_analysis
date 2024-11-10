@@ -25,7 +25,7 @@ Attention and self-attention are both mechanisms in machine learning, particular
   - Attention attends to another sequence (encoder-decoder), while self-attention attends within the same sequence (encoder or decoder alone).
 - Application
   - Attention often cross-references between input and output sequences, while self-attention enriches each token's understanding by cross-referencing other tokens within the same sequence.
-- In essence, |self-attention is a type of attention applied within the same sequence, enabling rich contextual understanding within the sequence`.
+- In essence, `self-attention is a type of attention applied within the same sequence, enabling rich contextual understanding within the sequence`.
 ## Example sentence
 - Suppose the input sentence is
 > "The cat sat on the mat."
