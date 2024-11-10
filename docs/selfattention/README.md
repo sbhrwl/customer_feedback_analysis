@@ -40,10 +40,10 @@ Attention and self-attention are both mechanisms in machine learning, particular
 - When it reaches "tapis" (French for "mat"), it will attend to "mat" in the English sentence.
 - Here, attention helps the model to focus on the correct parts of the input sequence (English sentence) to generate the output sequence (French sentence).
 ### Self-Attention
-- Self-Attention within a single sequence, such as understanding word dependencies and relationships within this single sentence in a transformer encoder. 
-- In self-attention, we’re processing the same English sentence to understand its internal dependencies. 
+- In self-attention, we’re processing the same English sentence to understand its internal dependencies.
+  - Self-Attention within a single sequence, focuses on `understanding word dependencies` and `relationships within this single sentence`. 
 - Each word in the sentence can attend to every other word, allowing it to capture relationships and context within the sentence itself.
-**Word Dependency Highlights**
+#### Word Dependency Highlights
 - For "cat," the model might give higher attention weights to "The" and "sat" to understand that "cat" is the subject that "sat."
 - For "sat," the model will likely attend to "cat" (to understand who sat) and "on" (for where it sat).
 - For "the mat," the model will pay attention to "sat on" to understand that "the mat" is the object being sat on.
