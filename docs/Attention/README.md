@@ -6,12 +6,6 @@
 - https://github.com/tensorflow/tensor2tensor
 - https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb
 
-## Self Attention
- RNN, LSTM and GRU  
- 
- Performance degrader for long sequences
- Remember shorter context
- 
  ## Attention
  Idea is to build a "context" vector 
  Find context at any point of time of a sequence
