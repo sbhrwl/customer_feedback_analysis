@@ -14,7 +14,7 @@
 
 ### Self-Attention
 - **Core Concept**: Enables the model to weigh the importance of different words in a sentence, focusing on relevant parts of the input sequence.
-- **Calculation**: Computes a set of attention scores for each word, which determines its relevance to other words in the sequence.
+- **Calculation**: Computes a set of `attention scores for each word, which determines its relevance to other words in the sequence`.
 - **Benefits**: Captures dependencies regardless of distance between words, enhancing context understanding and improving performance on tasks like translation and summarization.
 - **Usage**:
   - **Encoding**: Helps the encoder understand the context by attending to different parts of the input sequence simultaneously.
