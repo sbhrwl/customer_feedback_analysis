@@ -28,58 +28,33 @@ Attention and self-attention are both mechanisms in machine learning, particular
 - In essence, |self-attention is a type of attention applied within the same sequence, enabling rich contextual understanding within the sequence`.
 ## Example sentence
 - Suppose the input sentence is
-
 > "The cat sat on the mat."
-
-
-
-Let’s imagine we’re processing this sentence in two different contexts:
-
+- Let’s imagine we’re processing this sentence in two different contexts:
 1. Attention (Cross-Attention) in a sequence-to-sequence model, like in a translation task where we translate from English to French.
-
-
 2. Self-Attention within a single sequence, such as understanding word dependencies and relationships within this single sentence in a transformer encoder.
-
-
-
 1. Attention (Cross-Attention) Example
-
-Imagine we're translating this sentence into French. In the decoder, when generating each word in the output (French) sentence, the model uses attention to focus on specific parts of the input (English) sentence that are most relevant to the current output word.
-
-Example Translation:
-
+   - Imagine we're translating this sentence into French. 
+   - In the decoder, when generating each word in the output (French) sentence, the model uses attention to focus on specific parts of the input (English) sentence that are most relevant to the current output word.
+- Example Translation:
 > "Le chat s'est assis sur le tapis."
-
-
-
-For generating "Le" in the French sentence, the decoder will pay the most attention to "The" in the English sentence.
-
-For generating "chat," it will pay the most attention to "cat."
-
-When it reaches "tapis" (French for "mat"), it will attend to "mat" in the English sentence.
-
-
-Here, attention helps the model to focus on the correct parts of the input sequence (English sentence) to generate the output sequence (French sentence).
+- For generating "Le" in the French sentence, the decoder will pay the most attention to "The" in the English sentence.
+- For generating "chat," it will pay the most attention to "cat."
+- When it reaches "tapis" (French for "mat"), it will attend to "mat" in the English sentence.
+- Here, attention helps the model to focus on the correct parts of the input sequence (English sentence) to generate the output sequence (French sentence).
 
 2. Self-Attention Example
+- In self-attention, we’re processing the same English sentence to understand its internal dependencies. 
+- Each word in the sentence can attend to every other word, allowing it to capture relationships and context within the sentence itself.
+**Word Dependency Highlights**
+- For "cat," the model might give higher attention weights to "The" and "sat" to understand that "cat" is the subject that "sat."
+- For "sat," the model will likely attend to "cat" (to understand who sat) and "on" (for where it sat).
+- For "the mat," the model will pay attention to "sat on" to understand that "the mat" is the object being sat on.
+- In this case, self-attention enables the model to build a contextualized representation of each word by considering other words in the sentence. 
+- This is particularly useful in understanding which words are linked (e.g., "cat" and "sat," "sat" and "on the mat").
 
-In self-attention, we’re processing the same English sentence to understand its internal dependencies. Each word in the sentence can attend to every other word, allowing it to capture relationships and context within the sentence itself.
-
-Word Dependency Highlights:
-
-For "cat," the model might give higher attention weights to "The" and "sat" to understand that "cat" is the subject that "sat."
-
-For "sat," the model will likely attend to "cat" (to understand who sat) and "on" (for where it sat).
-
-For "the mat," the model will pay attention to "sat on" to understand that "the mat" is the object being sat on.
-
-
-In this case, self-attention enables the model to build a contextualized representation of each word by considering other words in the sentence. This is particularly useful in understanding which words are linked (e.g., "cat" and "sat," "sat" and "on the mat").
-
-Summary
-
-Attention (Cross-Attention): Helps map relevant words from the input sequence to generate the output sequence in tasks like translation.
-
-Self-Attention: Enables each word to attend to others within the same sequence, creating context-rich representations of each word relative to the others. This is crucial for tasks like sentence understanding and classification.
+### Summary
+- Attention (Cross-Attention): Helps map relevant words from the input sequence to generate the output sequence in tasks like translation.
+- Self-Attention: Enables each word to attend to others within the same sequence, creating context-rich representations of each word relative to the others. 
+  - This is crucial for tasks like sentence understanding and classification.
 
 
