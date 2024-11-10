@@ -45,6 +45,35 @@
 +---------+------------+-----------+-----------+-----------+------------+----------------------+
 ```
 
-This table and timeline illustrate the progressive advancements in neural network architectures, addressing challenges such as sequential data handling, long-term dependencies, bidirectional context, dynamic focus on input information, and scaling for performance.
+## Translation Models for "Tourists visit Finland to watch Northern lights"
+- The sentence we’ll be working with is "Tourists visit Finland to watch Northern lights." The accurate Finnish translation for this is "Turistit vierailevat Suomessa katsomassa revontulia." Now, let's see how different models handle this translation and how they evolve.
 
-If you have more questions or need further details on any of these architectures, feel free to ask!
+### 1. Artificial Neural Network (ANN)
+- **Problem**: ANNs are not ideal for sequence data because they lack the notion of time and order. They treat all inputs independently, which makes translating sentences that depend on the context and order challenging.
+
+### 2. Recurrent Neural Network (RNN)
+- **Improvement**: RNNs introduced the concept of time steps, processing inputs sequentially.
+- **Problem**: They struggle with long-term dependencies. For instance, remembering the context from "Tourists visit" and correctly linking it to "Northern lights" when generating the output.
+
+### 3. Long Short-Term Memory (LSTM)
+- **Improvement**: LSTMs address the issue of long-term dependencies by maintaining a memory cell that can remember or forget information over long sequences.
+- **Problem**: While better than RNNs, LSTMs can still struggle with very long sequences and are computationally intensive.
+
+### 4. Bidirectional RNN (BiRNN)
+- **Improvement**: BiRNNs process the input data in both forward and backward directions, giving them access to past and future context.
+- **Problem**: Although they improve context capture, they still inherit RNN's computational intensity and complexity.
+
+### 5. Encoder-Decoder
+- **Improvement**: The Encoder-Decoder architecture separates the input processing (encoder) and output generation (decoder). The encoder captures the input sentence in a context vector, and the decoder generates the output based on this vector.
+- **Problem**: The fixed-length context vector can bottleneck the model performance, especially for long sentences.
+
+### 6. Encoder-Decoder with Attention
+- **Improvement**: Attention mechanisms allow the model to focus on different parts of the input sentence when generating each word of the output, alleviating the fixed context vector issue.
+- **Problem**: Despite significant improvements, attention mechanisms can be complex to implement and computationally expensive.
+
+### 7. Transformer
+- **Improvement**: Transformers use self-attention mechanisms and do not rely on sequential data processing, which makes them highly parallelizable and efficient. They capture long-range dependencies more effectively.
+- **Result**: "Tourists visit Finland to watch Northern lights" is accurately translated to "Turistit vierailevat Suomessa katsomassa revontulia."
+
+### Conclusion
+- Transformers represent the cutting-edge in sequence modeling, offering unparalleled efficiency and accuracy in translation tasks. Each model iteration builds on its predecessor, addressing critical weaknesses and evolving to handle the nuances of natural language more effectively.
