@@ -29,7 +29,7 @@
 - This allows the model to focus on relevant parts of the input, improving the quality of the generated output.
 
 ### **Facilitating Attention Mechanisms**
-- Attention mechanisms enhance the encoder-decoder architecture by allowing the decoder to access different parts of the encoder's output dynamically. 
+- Attention mechanisms enhance the encoder-decoder architecture by **allowing the `decoder` to access different parts of the `encoder's output` dynamically**. 
 - This is particularly useful in tasks like translation, where certain words in the input sequence need more attention when generating the corresponding output.
 
 ### **Example: Machine Translation**
