@@ -46,14 +46,18 @@
 ```
 
 ## Translation Models for "Tourists visit Finland to watch Northern lights"
-- The sentence we’ll be working with is "Tourists visit Finland to watch Northern lights." The accurate Finnish translation for this is "Turistit vierailevat Suomessa katsomassa revontulia." Now, let's see how different models handle this translation and how they evolve.
+- The sentence we’ll be working with is "Tourists visit Finland to watch Northern lights."
+- The accurate Finnish translation for this is "Turistit vierailevat Suomessa katsomassa revontulia."
+- Now, let's see how different models handle this translation and how they evolve.
 
 ### 1. Artificial Neural Network (ANN)
-- **Problem**: ANNs are not ideal for sequence data because they lack the notion of time and order. They treat all inputs independently, which makes translating sentences that depend on the context and order challenging.
+- **Problem**: ANNs are not ideal for sequence data because they lack the notion of time and order.
+- They treat all inputs independently, which makes translating sentences that depend on the context and order challenging.
 
 ### 2. Recurrent Neural Network (RNN)
 - **Improvement**: RNNs introduced the concept of time steps, processing inputs sequentially.
-- **Problem**: They struggle with long-term dependencies. For instance, remembering the context from "Tourists visit" and correctly linking it to "Northern lights" when generating the output.
+- **Problem**: They struggle with long-term dependencies.
+- For instance, remembering the context from "Tourists visit" and correctly linking it to "Northern lights" when generating the output.
 
 ### 3. Long Short-Term Memory (LSTM)
 - **Improvement**: LSTMs address the issue of long-term dependencies by maintaining a memory cell that can remember or forget information over long sequences.
@@ -72,7 +76,8 @@
 - **Problem**: Despite significant improvements, attention mechanisms can be complex to implement and computationally expensive.
 
 ### 7. Transformer
-- **Improvement**: Transformers use self-attention mechanisms and do not rely on sequential data processing, which makes them highly parallelizable and efficient. They capture long-range dependencies more effectively.
+- **Improvement**: Transformers use self-attention mechanisms and do not rely on sequential data processing, which makes them highly parallelizable and efficient.
+- They capture long-range dependencies more effectively.
 - **Result**: "Tourists visit Finland to watch Northern lights" is accurately translated to "Turistit vierailevat Suomessa katsomassa revontulia."
 
 ### Conclusion
