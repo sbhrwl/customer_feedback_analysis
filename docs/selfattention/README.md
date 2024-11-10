@@ -1,37 +1,33 @@
 Attention and self-attention are both mechanisms in machine learning, particularly in neural networks for sequence processing (like transformers). Here’s a breakdown of their differences:
 
-Attention
+## Attention
+- Purpose
+  - Attention allows the model to focus on relevant parts of the input sequence when generating each output. 
+  - It's helpful when each output token needs to attend to specific parts of the input.
 
-Purpose: Attention allows the model to focus on relevant parts of the input sequence when generating each output. It's helpful when each output token needs to attend to specific parts of the input.
+- Usage
+  - Commonly used in sequence-to-sequence tasks, like machine translation, where the model attends to relevant words in the input sentence to generate each word in the output sentence.
 
-Usage: Commonly used in sequence-to-sequence tasks, like machine translation, where the model attends to relevant words in the input sentence to generate each word in the output sentence.
+- How it Works
+  - In standard encoder-decoder architectures, attention scores are calculated based on the similarity between the decoder state and each encoder state.
+  - This score indicates how much the model should "pay attention" to each input token for the current output token.
 
-How it Works: In standard encoder-decoder architectures, attention scores are calculated based on the similarity between the decoder state and each encoder state. This score indicates how much the model should "pay attention" to each input token for the current output token.
+## Self-Attention
+- Purpose
+  - Self-attention enables each word in a sequence to relate to every other word within the same sequence, allowing the model to understand dependencies within the sequence itself.
+- Usage
+  - Primarily used within transformers. Self-attention is employed in both encoder and decoder layers, allowing each token to learn contextual representations by attending to other tokens in the sequence.
+- How it Works
+  - Self-attention computes a score for each pair of tokens in the sequence, enabling the model to understand relationships between words, like pronouns and their antecedents or interactions between words in a phrase.
 
-
-Self-Attention
-
-Purpose: Self-attention enables each word in a sequence to relate to every other word within the same sequence, allowing the model to understand dependencies within the sequence itself.
-
-Usage: Primarily used within transformers. Self-attention is employed in both encoder and decoder layers, allowing each token to learn contextual representations by attending to other tokens in the sequence.
-
-How it Works: Self-attention computes a score for each pair of tokens in the sequence, enabling the model to understand relationships between words, like pronouns and their antecedents or interactions between words in a phrase.
-
-
-Key Differences
-
-Scope: Attention attends to another sequence (encoder-decoder), while self-attention attends within the same sequence (encoder or decoder alone).
-
-Application: Attention often cross-references between input and output sequences, while self-attention enriches each token's understanding by cross-referencing other tokens within the same sequence.
-
-
-In essence, self-attention is a type of attention applied within the same sequence, enabling rich contextual understanding within the sequence.
-
-Let’s consider a concrete example with a simple sentence to illustrate the difference between attention and self-attention:
-
-Example Sentence
-
-Suppose the input sentence is:
+## Key Differences
+- Scope
+  - Attention attends to another sequence (encoder-decoder), while self-attention attends within the same sequence (encoder or decoder alone).
+- Application
+  - Attention often cross-references between input and output sequences, while self-attention enriches each token's understanding by cross-referencing other tokens within the same sequence.
+- In essence, |self-attention is a type of attention applied within the same sequence, enabling rich contextual understanding within the sequence`.
+## Example sentence
+- Suppose the input sentence is
 
 > "The cat sat on the mat."
 
