@@ -19,7 +19,7 @@
 ### Improving Context Representation
 - While bidirectional RNNs can capture information from both directions, they may still struggle with very long sequences. 
 - An encoder-decoder architecture separates the task into two phases:
-  - **Encoder**: Reads the entire input sequence and compresses it into a fixed-length context vector.
+  - **Encoder**: Reads the entire input sequence and compresses it into a fixed-length **context vector**.
   - **Decoder**: Takes the context vector and generates the output sequence step-by-step. 
 - This separation helps in **managing `long-term dependencies` more effectively**.
 
