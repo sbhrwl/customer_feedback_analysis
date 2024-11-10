@@ -14,7 +14,7 @@
 ### Key Evolution Points:
 1. **ANN to RNN**:
    - **Challenge**: ANNs couldn't handle sequences effectively.
-   - **Solution**: RNNs introduced `memory`, allowing sequential data processing.
+   - **Solution**: RNNs introduced `memory`, allowing `sequential data processing`.
 
 2. **RNN to LSTM**:
    - **Challenge**: RNNs struggled with long-term dependencies due to the vanishing gradient problem.
@@ -22,19 +22,19 @@
 
 3. **LSTM to Bidirectional RNN**:
    - **Challenge**: LSTMs processed data in a single direction, missing future context.
-   - **Solution**: Bidirectional RNNs processed data in `both directions, capturing more context`.
+   - **Solution**: Bidirectional RNNs `processed data in both directions`, `capturing more context`.
 
 4. **Bidirectional RNN to Encoder-Decoder**:
    - **Challenge**: Bidirectional RNNs had limitations with variable-length sequences and complex dependencies.
-   - **Solution**: Encoder-Decoder architectures separated the encoding and decoding phases, adding flexibility and handling variable-length sequences.
+   - **Solution**: Encoder-Decoder architectures `separated the encoding and decoding phases`, adding flexibility and `handling variable-length sequences`.
 
 5. **Encoder-Decoder to Attention Mechanisms**:
    - **Challenge**: Encoder-Decoder architectures needed a better focus mechanism on the input sequence during decoding.
-   - **Solution**: Attention Mechanisms allowed the decoder to dynamically focus on relevant parts of the input sequence, enhancing performance.
+   - **Solution**: Attention Mechanisms allowed the decoder to `dynamically focus on relevant parts` of the input sequence, `enhancing performance`.
 
 6. **Attention Mechanisms to Transformers**:
    - **Challenge**: Attention mechanisms, while powerful, introduce computational complexity and risk of overfitting.
-   - **Solution**: Transformer models use `self-attention` mechanisms, enabling scaling and parallel processing, leading to breakthroughs in performance and efficiency.
+   - **Solution**: Transformer models use `self-attention` mechanisms, enabling `scaling and parallel processing`, leading to breakthroughs in performance and efficiency.
 
 ### Visualization:
 ```
