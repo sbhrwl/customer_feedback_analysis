@@ -21,7 +21,7 @@
 - An encoder-decoder architecture separates the task into two phases:
   - **Encoder**: Reads the entire input sequence and compresses it into a fixed-length context vector.
   - **Decoder**: Takes the context vector and generates the output sequence step-by-step. 
-- This separation helps in managing long-term dependencies more effectively.
+- This separation helps in **managing `long-term dependencies` more effectively**.
 
 ### **Providing Flexibility in Sequence Generation**
 - The encoder-decoder framework offers flexibility in generating sequences. 
