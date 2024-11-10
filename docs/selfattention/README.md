@@ -30,11 +30,8 @@ Attention and self-attention are both mechanisms in machine learning, particular
 - Suppose the input sentence is
 > "The cat sat on the mat."
 - Let’s imagine we’re processing this sentence in two different contexts:
-1. Attention (Cross-Attention) in a sequence-to-sequence model, like in a translation task where we translate from English to French.
-2. Self-Attention within a single sequence, such as understanding word dependencies and relationships within this single sentence in a transformer encoder.
-
-1. Attention (Cross-Attention) Example
-   - Imagine we're translating this sentence into French. 
+### Attention
+- Attention (Cross-Attention) in a sequence-to-sequence model, like in a translation task where we translate from English to French.
    - In the decoder, when generating each word in the output (French) sentence, the model uses attention to focus on specific parts of the input (English) sentence that are most relevant to the current output word.
 - Example Translation:
 > "Le chat s'est assis sur le tapis."
@@ -42,8 +39,8 @@ Attention and self-attention are both mechanisms in machine learning, particular
 - For generating "chat," it will pay the most attention to "cat."
 - When it reaches "tapis" (French for "mat"), it will attend to "mat" in the English sentence.
 - Here, attention helps the model to focus on the correct parts of the input sequence (English sentence) to generate the output sequence (French sentence).
-
-2. Self-Attention Example
+### Self-Attention
+- Self-Attention within a single sequence, such as understanding word dependencies and relationships within this single sentence in a transformer encoder. 
 - In self-attention, we’re processing the same English sentence to understand its internal dependencies. 
 - Each word in the sentence can attend to every other word, allowing it to capture relationships and context within the sentence itself.
 **Word Dependency Highlights**
