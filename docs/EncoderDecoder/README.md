@@ -7,6 +7,7 @@
 - [Types](#types)
   - [RNN based encoder decoder](#rnn-based-encoder-decoder)
   - [Transformer based encoder decoder](#transformer-based-encoder-decoder)
+- [Building block of a encoder decoder](#building-block-of-a-encoder-decoder)
 - [Illustration of encoder decoder architecture](#illustration-of-encoder-decoder-architecture)
   - [Code example in TensorFlow and Keras](#code-example-in-tensorflow-and-keras)
 - [Seq to Seq](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
@@ -69,6 +70,55 @@
 ### Summary
 - **RNN-based Encoder-Decoder**: Utilizes RNNs to handle sequential dependencies, commonly found in earlier models.
 - **Transformer-based Encoder-Decoder**: Utilizes self-attention mechanisms for parallel processing and better handling of long-range dependencies, commonly found in modern models.
+
+## Building block of a encoder decoder
+- The building blocks of an encoder-decoder architecture can vary depending on the specific implementation.
+- However, the most common and influential components include
+### Encoder
+- **Purpose**
+  - To process and encode the input sequence into a fixed-length context vector or a sequence of context vectors.
+- **Components**
+  - **Embedding Layer**: Converts input tokens into dense vectors of fixed size.
+  - **Recurrent Layers (RNN/LSTM/GRU)**: For RNN-based models, these layers capture temporal dependencies.
+  - **Self-Attention Layers**: For transformer-based models, these layers allow the model to weigh the importance of each input token relative to others.
+  - **Positional Encoding**: For transformers, this adds information about the position of tokens in the sequence.
+
+### Decoder
+- **Purpose**
+  - To generate the output sequence using the encoded information.
+- **Components**:
+  - **Embedding Layer**: Converts output tokens into dense vectors of fixed size.
+  - **Recurrent Layers (RNN/LSTM/GRU)**: For RNN-based models, these layers generate the output sequence step-by-step.
+  - **Self-Attention Layers**: For transformer-based models, these layers allow the decoder to focus on relevant parts of the input and previously generated output.
+  - **Positional Encoding**: For transformers, this adds positional information to the output tokens.
+
+### Attention Mechanism (Optional but Common)
+- **Purpose**
+  - To enhance the model's ability to focus on relevant parts of the input sequence during decoding.
+- **Components**:
+  - **Attention Scores**: Calculate the relevance of each input token to the current output token.
+  - **Context Vector**: Combines the input tokens weighted by their attention scores, providing additional context to the decoder.
+
+### Final Linear and Softmax Layers
+- **Purpose**
+  - To transform the decoder's output into a probability distribution over the possible output tokens.
+- **Components**:
+  - **Linear Layer**: Projects the decoder's output to the vocabulary size.
+  - **Softmax Layer**: Converts the linear projections into probabilities.
+
+### Visual Representation:
+- These components work together to process the input sequence and generate the desired output sequence, making encoder-decoder architectures versatile for various sequence-to-sequence tasks like `translation, summarization`, and more.
+```
++----------------+        +----------------+
+|    Encoder     |        |    Decoder     |
+|                |        |                |
+| Input -> Embed |  ----> |  Embed -> Output|
+|    + LSTM/GRU  |        |  + LSTM/GRU    |
+|    + Attention |        |  + Attention   |
+|    + Positional|        |  + Positional  |
+|     Encoding   |        |     Encoding   |
++----------------+        +----------------+
+```
 
 ## Illustration of encoder decoder architecture
 1. **Encoder**: 
