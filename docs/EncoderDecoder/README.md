@@ -59,6 +59,47 @@
 - **Example**
   - Early neural machine translation models use RNNs to handle sequential data.
 
+<details>
+  <summary>Details</summary>
+  
+  - Earlier encoder-decoder architectures were predominantly based on Recurrent Neural Networks (RNNs), which include Long Short-Term Memory networks (LSTMs) and Gated Recurrent Units (GRUs).
+  - Here's a brief overview:
+  ### Recurrent Neural Networks (RNNs)
+  - **Architecture**: Sequential processing, where each time step depends on the previous one.
+  - **Challenges**: Struggle with long-term dependencies due to the vanishing gradient problem.
+  
+  ### Long Short-Term Memory (LSTM)
+  - **Architecture**: An enhanced type of RNN designed to handle long-term dependencies.
+  - **Components**: Memory cells, input gates, output gates, and forget gates.
+  - **Advantages**: Mitigates the vanishing gradient problem, making it more effective for tasks that require memory over long sequences.
+  
+  ### Gated Recurrent Unit (GRU)
+  - **Architecture**: A simplified version of LSTM, with fewer gates.
+  - **Components**: Update gate and reset gate.
+  - **Advantages**: Comparable performance to LSTMs but with a simpler structure and faster training.
+  
+  ### Example Use Case: Machine Translation
+  - **Encoder**: Processes the input sequence (e.g., a sentence in English) and encodes it into a context vector.
+  - **Decoder**: Takes the context vector and generates the output sequence (e.g., the translation in French).
+  
+  ### Illustration
+  ```
+  Input Sentence: "The cat is on the mat."
+  
+  Encoder (RNN/LSTM/GRU):
+      "The" -> [context]
+      "cat" -> [context]
+      "is" -> [context]
+      "on" -> [context]
+      "the" -> [context]
+      "mat" -> [context vector]
+  
+  Decoder (RNN/LSTM/GRU):
+      [context vector] -> "Le" -> "chat" -> "est" -> "sur" -> "le" -> "tapis."
+  ```  
+
+  </details>
+
 ### Transformer based encoder decoder
 - **Usage**
   - `More recent encoder-decoder models`, especially for NLP tasks, **use transformers instead of RNNs**.
