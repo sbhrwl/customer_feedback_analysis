@@ -11,6 +11,7 @@
   - [Self attention](docs/selfattention/README.md)
 - [Large Language Models](docs/largelanguagemodels/README.md)
 - [Evolution](docs/evolution/README.md)
+- [Generative AI](https://github.com/sbhrwl/genai/blob/main/README.md)
 - [Named Entity Recognition](docs/ner/README.md)
 - [Comparing Google and Huggingface](docs/Google-Huggingface/README.md)
 - [Bidirectional taggers](docs/BidirectionalTaggers/README.md)
