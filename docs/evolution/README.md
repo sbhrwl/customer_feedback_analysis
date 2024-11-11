@@ -1,4 +1,10 @@
 # Evolution
+- [Evolution journey](#evolution-journey)
+  - [Key evolution points](#key-evolution-points)
+  - [Visualise evolution](#visualise-evolution)
+  - [Example](#example)
+
+## Evolution journey
 - Evolution from Artificial Neural Networks (ANNs) to Transformers, highlighting the challenges faced at each stage and how they were addressed by the subsequent architecture:
 
 | Architecture                     | Key Features                            | Challenges                                     | Solutions Provided by Next Architecture             |
@@ -11,32 +17,32 @@
 | **Encoder-Decoder with Attention** | Dynamic focus on input sequence, improved context handling | Computational complexity, overfitting risk     | Transformer models introduce self-attention, scaling, and parallelization  |
 | **Transformers**                 | Self-attention mechanism, parallel processing | Requires substantial computational resources, complex to train | Attention mechanisms scale effectively, simplifying training and improving performance |
 
-### Key Evolution Points:
-1. **ANN to RNN**:
+### Key evolution points
+1. **ANN to RNN**
    - **Challenge**: ANNs couldn't handle sequences effectively.
    - **Solution**: RNNs introduced `memory`, allowing `sequential data processing`.
 
-2. **RNN to LSTM**:
+2. **RNN to LSTM**
    - **Challenge**: RNNs struggled with long-term dependencies due to the vanishing gradient problem.
    - **Solution**: LSTMs introduced `memory cells and gates`, effectively `managing long-term dependencies`.
 
-3. **LSTM to Bidirectional RNN**:
+3. **LSTM to Bidirectional RNN**
    - **Challenge**: LSTMs processed data in a single direction, missing future context.
    - **Solution**: Bidirectional RNNs `processed data in both directions`, `capturing more context`.
 
-4. **Bidirectional RNN to Encoder-Decoder**:
+4. **Bidirectional RNN to Encoder-Decoder**
    - **Challenge**: Bidirectional RNNs had limitations with variable-length sequences and complex dependencies.
    - **Solution**: Encoder-Decoder architectures `separated the encoding and decoding phases`, adding flexibility and `handling variable-length sequences`.
 
-5. **Encoder-Decoder to Attention Mechanisms**:
+5. **Encoder-Decoder to Attention Mechanisms**
    - **Challenge**: Encoder-Decoder architectures needed a better focus mechanism on the input sequence during decoding.
    - **Solution**: Attention Mechanisms allowed the decoder to `dynamically focus on relevant parts` of the input sequence, `enhancing performance`.
 
-6. **Attention Mechanisms to Transformers**:
+6. **Attention Mechanisms to Transformers**
    - **Challenge**: Attention mechanisms, while powerful, introduce computational complexity and risk of overfitting.
    - **Solution**: Transformer models use `self-attention` mechanisms, enabling `scaling and parallel processing`, leading to breakthroughs in performance and efficiency.
 
-### Visualization:
+### Visualise evolution
 ```
 +---------+------------+-----------+-----------+-----------+------------+----------------------+
 |  ANN    |   RNN      |   LSTM    | BiRNN     | Encoder   | Attention  | Transformer          |
@@ -45,300 +51,57 @@
 +---------+------------+-----------+-----------+-----------+------------+----------------------+
 ```
 
-## Translation Models for "Tourists visit Finland to watch Northern lights"
+### Example
 - The sentence we’ll be working with is "Tourists visit Finland to watch Northern lights."
 - The accurate Finnish translation for this is "Turistit vierailevat Suomessa katsomassa revontulia."
 - Now, let's see how different models handle this translation and how they evolve.
 
-### 1. Artificial Neural Network (ANN)
+#### 1. Artificial Neural Network (ANN)
 - **Problem**: ANNs are not ideal for sequence data because they lack the notion of time and order.
 - They treat all inputs independently, which makes translating sentences that depend on the context and order challenging.
 
-### 2. Recurrent Neural Network (RNN)
+#### 2. Recurrent Neural Network (RNN)
 - **Improvement**: RNNs introduced the concept of time steps, processing inputs sequentially.
 - **Problem**: They struggle with long-term dependencies.
 - For instance, remembering the context from "Tourists visit" and correctly linking it to "Northern lights" when generating the output.
 
-### 3. Long Short-Term Memory (LSTM)
+#### 3. Long Short-Term Memory (LSTM)
 - **Improvement**: LSTMs address the issue of long-term dependencies by maintaining a memory cell that can remember or forget information over long sequences.
 - **Problem**: While better than RNNs, LSTMs can still struggle with very long sequences and are computationally intensive.
 
-### 4. Bidirectional RNN (BiRNN)
+#### 4. Bidirectional RNN (BiRNN)
 - **Improvement**: BiRNNs process the input data in both forward and backward directions, giving them access to past and future context.
 - **Problem**: Although they improve context capture, they still inherit RNN's computational intensity and complexity.
 
-### 5. Encoder-Decoder
+#### 5. Encoder-Decoder
 - **Improvement**: The Encoder-Decoder architecture separates the input processing (encoder) and output generation (decoder). The encoder captures the input sentence in a context vector, and the decoder generates the output based on this vector.
 - **Problem**: The fixed-length context vector can bottleneck the model performance, especially for long sentences.
 
-### 6. Encoder-Decoder with Attention
+#### 6. Encoder-Decoder with Attention
 - **Improvement**: Attention mechanisms allow the model to focus on different parts of the input sentence when generating each word of the output, alleviating the fixed context vector issue.
 - **Problem**: Despite significant improvements, attention mechanisms can be complex to implement and computationally expensive.
 
-### 7. Transformer
+#### 7. Transformer
 - **Improvement**: Transformers use self-attention mechanisms and do not rely on sequential data processing, which makes them highly parallelizable and efficient.
 - They capture long-range dependencies more effectively.
 - **Result**: "Tourists visit Finland to watch Northern lights" is accurately translated to "Turistit vierailevat Suomessa katsomassa revontulia."
 
-### Conclusion
+#### Conclusion
 - Transformers represent the cutting-edge in sequence modeling, offering unparalleled efficiency and accuracy in translation tasks. Each model iteration builds on its predecessor, addressing critical weaknesses and evolving to handle the nuances of natural language more effectively.
 
 ---
-Do encoder decoder utilise rnn internally 
 
-Encoder-decoder architectures can utilize various types of neural networks internally, including RNNs (Recurrent Neural Networks), but they are not limited to them. Here's a breakdown:
-
-### **1. RNN-based Encoder-Decoder:**
-- **Usage**: Traditional encoder-decoder models often use RNNs (such as LSTMs or GRUs) for both the encoder and decoder.
-- **Function**:
-  - **Encoder**: Processes the input sequence and compresses it into a context vector.
-  - **Decoder**: Generates the output sequence from the context vector.
-- **Example**: Early neural machine translation models use RNNs to handle sequential data.
-
-### **2. Transformer-based Encoder-Decoder:**
-- **Usage**: More recent encoder-decoder models, especially for NLP tasks, use transformers instead of RNNs.
-- **Function**:
-  - **Encoder**: Uses self-attention mechanisms to process the input sequence in parallel and capture context.
-  - **Decoder**: Also uses self-attention to generate the output sequence, attending to relevant parts of the encoded input.
-- **Example**: The Transformer model itself, and subsequent models like BERT and GPT, rely on this architecture.
-
-### **Summary:**
-- **RNN-based Encoder-Decoder**: Utilizes RNNs to handle sequential dependencies, commonly found in earlier models.
-- **Transformer-based Encoder-Decoder**: Utilizes self-attention mechanisms for parallel processing and better handling of long-range dependencies, commonly found in modern models.
-
-Would you like more details on any specific type of encoder-decoder architecture or their applications?
-
----
-What is a building block of a encoder decoder 
-
-The building blocks of an encoder-decoder architecture can vary depending on the specific implementation. However, the most common and influential components include:
-
-### **1. Encoder:**
-- **Purpose**: To process and encode the input sequence into a fixed-length context vector or a sequence of context vectors.
-- **Components**:
-  - **Embedding Layer**: Converts input tokens into dense vectors of fixed size.
-  - **Recurrent Layers (RNN/LSTM/GRU)**: For RNN-based models, these layers capture temporal dependencies.
-  - **Self-Attention Layers**: For transformer-based models, these layers allow the model to weigh the importance of each input token relative to others.
-  - **Positional Encoding**: For transformers, this adds information about the position of tokens in the sequence.
-
-### **2. Decoder:**
-- **Purpose**: To generate the output sequence using the encoded information.
-- **Components**:
-  - **Embedding Layer**: Converts output tokens into dense vectors of fixed size.
-  - **Recurrent Layers (RNN/LSTM/GRU)**: For RNN-based models, these layers generate the output sequence step-by-step.
-  - **Self-Attention Layers**: For transformer-based models, these layers allow the decoder to focus on relevant parts of the input and previously generated output.
-  - **Positional Encoding**: For transformers, this adds positional information to the output tokens.
-
-### **3. Attention Mechanism (Optional but Common):**
-- **Purpose**: To enhance the model's ability to focus on relevant parts of the input sequence during decoding.
-- **Components**:
-  - **Attention Scores**: Calculate the relevance of each input token to the current output token.
-  - **Context Vector**: Combines the input tokens weighted by their attention scores, providing additional context to the decoder.
-
-### **4. Final Linear and Softmax Layers:**
-- **Purpose**: To transform the decoder's output into a probability distribution over the possible output tokens.
-- **Components**:
-  - **Linear Layer**: Projects the decoder's output to the vocabulary size.
-  - **Softmax Layer**: Converts the linear projections into probabilities.
-
-### Visual Representation:
-```
-+----------------+        +----------------+
-|    Encoder     |        |    Decoder     |
-|                |        |                |
-| Input -> Embed |  ----> |  Embed -> Output|
-|    + LSTM/GRU  |        |  + LSTM/GRU    |
-|    + Attention |        |  + Attention   |
-|    + Positional|        |  + Positional  |
-|     Encoding   |        |     Encoding   |
-+----------------+        +----------------+
-```
-
-These components work together to process the input sequence and generate the desired output sequence, making encoder-decoder architectures versatile for various sequence-to-sequence tasks like translation, summarization, and more.
-
-Would you like more detailed examples or specific explanations of any of these components?
-
----
-What is the building block of transformers 
-
-The fundamental building block of transformers is the **transformer layer**, which leverages self-attention mechanisms and feed-forward neural networks. Here’s a breakdown of its core components:
-
-### **1. Self-Attention Mechanism:**
-- **Purpose**: Allows the model to weigh the importance of different words in a sequence.
-- **Components**:
-  - **Query (Q)**: A representation of the current word.
-  - **Key (K)**: A representation used to calculate the attention score.
-  - **Value (V)**: A representation that is combined based on the attention scores.
-- **Process**: Computes attention scores using Q and K, then combines V based on these scores.
-
-### **2. Multi-Head Attention:**
-- **Purpose**: Enhances the model’s ability to focus on different parts of the sequence simultaneously.
-- **Components**: Multiple self-attention heads run in parallel.
-- **Process**: Each head performs self-attention independently, and their outputs are concatenated and linearly transformed.
-
-### **3. Feed-Forward Neural Network:**
-- **Purpose**: Adds non-linearity and helps in capturing complex patterns.
-- **Components**:
-  - **Dense Layers**: Fully connected layers with activation functions.
-- **Process**: Applies two linear transformations with a ReLU activation in between.
-
-### **4. Layer Normalization and Residual Connections:**
-- **Purpose**: Stabilizes training and helps in retaining information across layers.
-- **Components**: 
-  - **Layer Norm**: Normalizes inputs to the layer.
-  - **Residual Connections**: Adds input to the output of the layer.
-- **Process**: Applies normalization and adds residual connections before and after each sub-layer (self-attention and feed-forward).
-
-### **5. Positional Encoding:**
-- **Purpose**: Provides information about the position of words in the sequence.
-- **Components**: Sinusoidal functions that encode position information.
-- **Process**: Adds positional encodings to the input embeddings to retain positional information.
-
-### **Visualization of a Transformer Layer:**
-```
-+-------------------+
-|   Input Embedding |
-| + Positional Enc. |
-+-------------------+
-         |
-+-------------------+
-| Multi-Head        |
-| Self-Attention    |
-+-------------------+
-         |
-+-------------------+
-| Add & Norm        |
-+-------------------+
-         |
-+-------------------+
-| Feed-Forward      |
-| Neural Network    |
-+-------------------+
-         |
-+-------------------+
-| Add & Norm        |
-+-------------------+
-         |
-      Output
-```
-
-### Summary:
-- **Self-Attention Mechanism**: Focuses on different parts of the sequence.
-- **Multi-Head Attention**: Allows multiple attentions in parallel.
-- **Feed-Forward Network**: Adds complexity to the model.
-- **Layer Normalization & Residual Connections**: Improve stability and information flow.
-- **Positional Encoding**: Retains word positions in the sequence.
-
-These components are stacked to build the encoder and decoder in transformers, forming a powerful model capable of handling complex sequence tasks efficiently.
-
-If you have more questions or need further details, feel free to ask!
-
----
-Do you mean they do not have rnn as underlying component
-
-Correct, the transformer architecture does not have RNNs (Recurrent Neural Networks) as an underlying component. Instead, transformers rely on self-attention mechanisms and feed-forward neural networks to process sequences. This approach allows transformers to handle dependencies more efficiently and in parallel, which is a significant departure from the sequential nature of RNNs.
-
-### Key Differences:
-- **Transformers**:
-  - **Self-Attention**: Uses self-attention to capture relationships between all elements of the input sequence simultaneously.
-  - **Parallel Processing**: Processes the entire sequence at once, improving computational efficiency and allowing for better handling of long-range dependencies.
-  - **No Recurrence**: Does not rely on sequential steps to process input, avoiding issues like vanishing gradients that can affect RNNs.
-
-- **RNNs**:
-  - **Sequential Processing**: Processes input sequentially, one time step at a time, maintaining a hidden state that captures information from previous steps.
-  - **Recurrence**: Utilizes recurrent connections to process sequences, which can struggle with long-range dependencies due to vanishing gradients.
-
-### Summary:
-- **RNN-based Models**: Sequential processing with recurrence, suitable for time-dependent data but limited by long-term dependencies.
-- **Transformer-based Models**: Parallel processing with self-attention, scalable and efficient for handling complex dependencies in sequences.
-
-This fundamental difference is one reason why transformers have become so popular for various natural language processing tasks and beyond.
-
-If you have more questions or need further details, feel free to ask!
-
----
-Ok, then what is included in feed forward neural network as you showed in previous answer 
-
-In the context of transformer models, the feed-forward neural network (FFN) is a crucial component that adds non-linearity and depth to the model. Here’s what it typically includes:
-
-### **1. Two Linear (Dense) Layers:**
-- **First Linear Layer**: Projects the input embeddings to a higher-dimensional space.
-  - **Input Dimension**: \( d_{model} \)
-  - **Output Dimension**: \( d_{ff} \) (often larger than \( d_{model} \))
-
-- **Second Linear Layer**: Projects the higher-dimensional space back to the original dimension.
-  - **Input Dimension**: \( d_{ff} \)
-  - **Output Dimension**: \( d_{model} \)
-
-### **2. Activation Function:**
-- **Purpose**: Introduces non-linearity into the model.
-- **Common Activation**: ReLU (Rectified Linear Unit)
-
-### **3. Dropout (Optional but Common):**
-- **Purpose**: Prevents overfitting by randomly setting a fraction of the output units to zero during training.
-- **Typical Dropout Rate**: Around 0.1 or 10%
-
-### **Process Flow:**
-1. **Input**: The output from the self-attention layer.
-2. **First Linear Transformation**: Applies the first dense layer.
-3. **Activation**: Applies the ReLU activation function.
-4. **Second Linear Transformation**: Applies the second dense layer.
-5. **Dropout (if used)**: Applies dropout to the output.
-6. **Output**: The final transformed output.
-
-### **Illustration:**
-```plaintext
-Input Embedding
-      │
-First Linear Layer
-      │
-     ReLU
-      │
-Second Linear Layer
-      │
-   Dropout
-      │
-   Output
-```
-
-### Summary:
-- **First Linear Layer**: Expands the dimensionality.
-- **ReLU Activation**: Adds non-linearity.
-- **Second Linear Layer**: Reduces the dimensionality back to the original size.
-- **Dropout**: Helps regularize the model.
-
-This feed-forward network is applied independently to each position in the sequence and the same parameters are used for each position. It's a key component that enhances the model's capacity to capture complex patterns and relationships in the data.
-
-If you have more questions or need further details, feel free to ask!
-
-
----
-And this feed forward neural network doesn't contain rnn?
-
-Correct! The feed-forward neural network (FFN) in the transformer architecture does not contain any RNN (Recurrent Neural Network) components. Instead, it consists of purely feed-forward operations, which means it applies linear transformations, activations, and optionally dropout, to each position in the sequence independently and in parallel. This is one of the key distinctions that sets transformers apart from traditional RNN-based models.
-
-Here's a recap of the FFN components in transformers:
-- **Linear Layers**: Two dense (fully connected) layers that project the input to a higher-dimensional space and then back to the original dimension.
-- **Activation Function**: Usually ReLU, which introduces non-linearity.
-- **Dropout (optional)**: Helps prevent overfitting.
-
-The lack of recurrence allows transformers to process all elements of the input sequence simultaneously, which significantly improves training efficiency and the ability to capture long-range dependencies.
-
-Would you like more details on any part of the transformer architecture or its components?
-
----
 What came first encoder decoder or transformers?
 
-The **encoder-decoder architecture** came first[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://www.larksuite.com/en_us/topics/ai-glossary/encoder-decoder-architecture?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1"). It was introduced in the early 2010s and became prominent with the development of sequence-to-sequence (seq2seq) models for tasks like machine translation[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://www.larksuite.com/en_us/topics/ai-glossary/encoder-decoder-architecture?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1"). These models typically used RNNs (Recurrent Neural Networks) to process sequences[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://en.wikipedia.org/wiki/Transformer_%28deep_learning_architecture%29?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2").
+The **encoder-decoder architecture** came first. It was introduced in the early 2010s and became prominent with the development of sequence-to-sequence (seq2seq) models for tasks like machine translation. These models typically used RNNs (Recurrent Neural Networks) to process sequences.
 
-The **transformer architecture** was introduced later, in a 2017 paper titled "Attention Is All You Need" by Vaswani et al[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://www.datacamp.com/tutorial/how-transformers-work?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "3"). Transformers were designed to overcome some of the limitations of RNNs, such as difficulty in handling long-range dependencies, by using self-attention mechanisms instead of recurrence[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://en.wikipedia.org/wiki/Transformer_%28deep_learning_architecture%29?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2").
+The **transformer architecture** was introduced later, in a 2017 paper titled "Attention Is All You Need" by Vaswani et al. Transformers were designed to overcome some of the limitations of RNNs, such as difficulty in handling long-range dependencies, by using self-attention mechanisms instead of recurrence.
 
 So, in summary:
 - **Encoder-Decoder**: Early 2010s, based on RNNs.
 - **Transformers**: 2017, based on self-attention mechanisms.
 
 Does that help clarify the timeline for you?
-
 
 ---
 What were earlier encoder decoder based on
