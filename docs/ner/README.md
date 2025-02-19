@@ -1,5 +1,5 @@
 # Named Entity Recognition
-- Test parsing
+- Text parsing
 - Text processing
 - Data annotation
 - Model training
